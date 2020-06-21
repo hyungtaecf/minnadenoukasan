@@ -1,0 +1,445 @@
+{% extends "store/base.html" %}
+{% load static %}
+{% block title %}Agrevo Store{% endblock %}
+{% block styles %}<link rel="stylesheet" type="text/css" href="{% static 'css/store.css' %}"> {% endblock %}
+{% block content %}
+        <!-- Superior Section -->
+        <section id="superior_section">
+            <!-- Top Bar -->
+            <section id="top_bar">
+                <div class="top_bar_container d-flex flex-row">
+                    <div class="d-flex flex-row">
+                        <!-- Important Notices -->
+                        <div id="top_notices" class="d-flex flex-row">
+                            <div class="title">Important Notices</div>
+                            <div class="notice">All emails, including order emails, are in the mailbox on your <strong><a href="">admin page</a></strong></div>
+                        </div>
+                    </div>
+                    <!-- !Important Notices -->
+
+                    <!-- Search -->
+                    <div class="d-flex flex-row">
+                        <form action="">
+                            <select class="form_field" name="option" id="">
+                            <option value="" selected disabled>Select from the following</option>
+                            <option value="">Search by product name</option>
+                            <option value="">Search by trader name</option>
+                            <option value="">Search by vendors</option>
+                            <option value="">Display by menu name</option>
+                        </select>
+                            <input type="text" class="form_field" name="search_field">
+                            <button class="btn" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- !Search -->
+            </section>
+            <!-- !Top Bar -->
+
+
+            <section id="superior_section_main" class="d-flex flex-row">
+                <!-- Left Banners -->
+                <div id="left_banners">
+                    <a href="">
+                        <div>
+                            <img src='{% static "img/left_banner_1.jpg" %}' alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- !Left Banners -->
+
+                <div id="superior_section_center" class="d-flex flex-column">
+                    <!-- Top Banners -->
+                    <div id="top_banners" class="d-flex flex-row justify-content-between   ">
+                        <a href="http://store.agrevo.life/">
+                            <div>
+                                <img src='{% static "img/agrevo_banana1.jpeg" %}' alt="">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <img src='{% static "img/top_banner2.jpg" %}' alt="">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <img src='{% static "img/top_banner_3.jpg" %}' alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <!-- !Top Banners -->
+
+                    <!-- Middle Message -->
+                    <div class="text-center">
+                        Agrevo Store is a registered trademark. Never use it's keywords without permission.
+                    </div>
+                    <!-- !Middle Message -->
+
+                    <!-- Middle section -->
+                    <section class="d-flex flex-row">
+                        <!-- Inferior section of advertisements -->
+                        <div id="inferior_ads" class="d-flex flex-column">
+                            <a href="">
+                                <div>
+                                    <img src='{% static "img/inferior-1.jpg" %}' alt="">
+                                </div>
+                            </a>
+                            <div class="d-flex flex-row">
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2a.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2b.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="">
+                                <div>
+                                    <img src='{% static "img/inferior-1.jpg" %}' alt="">
+                                </div>
+                            </a>
+                            <div class="d-flex flex-row">
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2a.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2b.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="">
+                                <div>
+                                    <img src='{% static "img/inferior-1.jpg" %}' alt="">
+                                </div>
+                            </a>
+                            <div class="d-flex flex-row">
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2a.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2b.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="">
+                                <div>
+                                    <img src='{% static "img/inferior-1.jpg" %}' alt="">
+                                </div>
+                            </a>
+                            <div class="d-flex flex-row">
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2a.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2b.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="">
+                                <div>
+                                    <img src='{% static "img/inferior-1.jpg" %}' alt="">
+                                </div>
+                            </a>
+                            <div class="d-flex flex-row">
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2a.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2b.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="">
+                                <div>
+                                    <img src='{% static "img/inferior-1.jpg" %}' alt="">
+                                </div>
+                            </a>
+                            <div class="d-flex flex-row">
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2a.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div>
+                                        <img src='{% static "img/inferior-2b.jpg" %}' alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- !Inferior section of advertisements -->
+                        <div class="d-flex flex-column w-100">
+                            <div class="d-flex flex-row justify-content-center">
+                                <!-- Left Products Ads-->
+                                <div class="prod_ads">
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <div class="smaller d-flex flex-row">
+                                        <a href="">
+                                            <div>
+                                                <img src='{% static "img/product_ad-small.png" %}' alt="">
+                                            </div>
+                                        </a>
+                                        <a href="">
+                                            <div>
+                                                <img src='{% static "img/product_ad-small.png" %}' alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="smaller d-flex flex-row">
+                                        <a href="">
+                                            <div>
+                                                <img src='{% static "img/product_ad-small.png" %}' alt="">
+                                            </div>
+                                        </a>
+                                        <a href="">
+                                            <div>
+                                                <img src='{% static "img/product_ad-small.png" %}' alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- !Left Products Ads-->
+                                <!-- Food Industry News -->
+                                <div id="food_industry_news">
+                                    <div class="title">Food Industry News</div>
+                                    <ul>
+                                        <li><a>This month's agricultural work Rice farming</a></li>
+                                        <li><a>Proposed revision of various laws</a></li>
+                                        <li><a>Established Hokkaido Salmon/Masuku Association</a></li>
+                                        <li><a>"Special policy recommendations" based on Corona</a></li>
+                                        <li><a>Due to event cancellation, store closure</a></li>
+                                        <li><a>[Deep layer] All bids for stockpiled rice are awarded</a></li>
+                                        <li><a>Good fresh products</a></li>
+                                        <li><a>New Rural Policy Study Group</a></li>
+                                        <li><a>Auction transaction cancellation</a></li>
+                                    </ul>
+                                    <a href="" class="see_more">See more</a>
+                                </div>
+                                <!-- !Food Industry News -->
+                                <!-- Right Products Ads -->
+                                <div class="prod_ads">
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div>
+                                            <img src='{% static "img/product_ad-medium.png" %}' alt="">
+                                        </div>
+                                    </a>
+                                    <div class="smaller d-flex flex-row">
+                                        <a href="">
+                                            <div>
+                                                <img src='{% static "img/product_ad-small.png" %}' alt="">
+                                            </div>
+                                        </a>
+                                        <a href="">
+                                            <div>
+                                                <img src='{% static "img/product_ad-small.png" %}' alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="smaller d-flex flex-row">
+                                        <a href="">
+                                            <div>
+                                                <img src='{% static "img/product_ad-small.png" %}' alt="">
+                                            </div>
+                                        </a>
+                                        <a href="">
+                                            <div>
+                                                <img src='{% static "img/product_ad-small.png" %}' alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- !Right Products Ads -->
+                            </div>
+                            <!-- Links -->
+                            <div class="links">
+                                <nav>
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <a href="">Cheap Products</a>
+                                        <a href="">Differentiated Products</a>
+                                        <a href="">Newly Registered Products</a>
+                                        <a href="">Ingredients</a>
+                                        <a href="">Small Sales Market</a>
+                                        <a href="">Ready-To-Eat Food</a>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!-- !Links -->
+                        </div>
+                    </section>
+                    <!-- !Middle section -->
+                </div>
+
+
+                <!-- Right Banners -->
+                <div id="right_banners">
+                    <a href="">
+                        <div>
+                            <img src='{% static "img/right_banner_1.png" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                            <img src='{% static "img/right_banner_2.png" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                            <img src='{% static "img/right_banner_3.gif" %}' alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- !Right Banners -->
+            </section>
+        </section>
+        <!-- !Superior Section -->
+
+        <!-- Product Slider -->
+        <section id="product_slider">
+            <div class="d-flex flex-column">
+                <div class="d-flex flex-row">
+                    <a href="">
+                        <div>
+                            <img src='{% static "img/product_slider-1.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-2.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-3.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-4.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-5.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-6.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-7.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-10.jpg" %}' alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="d-flex flex-row">
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-11.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-12.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-13.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-14.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-15.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-16.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-17.jpg" %}' alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                          <img src='{% static "img/product_slider-18.jpg" %}' alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- !Product Slider -->
+{% endblock %}

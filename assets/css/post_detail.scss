@@ -1,0 +1,263 @@
+@import './variables';
+@import './fonts';
+h2 {
+    font-family: "Open Sans Bold";
+    font-size: 4.5rem;
+}
+
+.post_header {
+    min-height: calc(50vh - 13.7rem); //full-screen minus navbar height
+    .section_title {
+        margin: 1rem;
+        h2 {
+            font-size: 1.2rem;
+            height: 1.8rem;
+            text-align: center;
+            width: 6.5rem;
+            border-bottom: .2rem solid $agro_color-2;
+            margin-bottom: 2rem;
+        }
+    }
+    .post_info {
+        margin-bottom: 3rem;
+        h1 {
+            font-family: 'Open Sans Bold';
+            font-size: 1.2rem;
+            line-height: 127.1%;
+            letter-spacing: 0.015em;
+            margin-bottom: 1rem;
+        }
+        .post_info_sub {
+            margin-bottom: 1rem;
+            img {
+                width: 1rem;
+            }
+            p {
+                margin: 0 .75rem;
+                font-family: "Open Sans";
+                font-size: .75rem;
+                line-height: 127.1%;
+                letter-spacing: 0.015em;
+            }
+        }
+    }
+    @media (min-width:576px) {
+        padding: 0 2rem;
+        .section_title {
+            margin: 1.5rem;
+            h2 {
+                font-size: 2.25rem;
+                height: 3rem;
+                width: 9rem;
+                margin-bottom: 1rem;
+            }
+        }
+        .post_info {
+            margin-bottom: 1.5rem;
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            .post_info_sub {
+                margin-bottom: .5rem;
+                p {
+                    margin: 0 .75rem;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 0 2.5rem;
+    }
+    @media (min-width: 992px) {
+        padding: 0 3rem;
+    }
+    @media (min-width: 1200px) {
+        padding: 0 4rem;
+        min-height: calc(100vh - 13.7rem);
+        .section_title {
+            margin: 3rem;
+            h2 {
+                font-size: 4.5rem;
+                height: 6rem;
+                width: 18rem;
+                margin-bottom: 2rem;
+            }
+        }
+        .post_info {
+            margin-bottom: 3rem;
+            h1 {
+                font-size: 3.2vw;
+                margin-bottom: 2rem;
+            }
+            .post_info_sub {
+                margin-bottom: 1rem;
+                img {
+                    width: 1.5rem;
+                }
+                p {
+                    margin: 0 .75rem;
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+}
+
+.blog_post {
+    background: $agro_color-white;
+    margin-bottom: 5rem;
+    // padding: 2rem 1rem;
+    .img_container {
+        position: relative;
+        height: 50vh;
+        width: 100%;
+        overflow: hidden;
+        margin: 4vw 0;
+        img {
+            position: absolute;
+            top: 0;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            height: 50vh;
+        }
+    }
+    p {
+        text-align: justify;
+        font-size: .9rem;
+        margin-bottom: .8vw;
+    }
+    @media (min-width: 576px) {
+        padding: 0 2rem 2rem;
+    }
+    @media (min-width: 768px) {
+        padding: 0 2.5rem 2.5rem;
+    }
+    @media (min-width: 992px) {
+        padding: 0 3rem 3rem;
+    }
+    @media (min-width: 1200px) {
+        padding: 0 4rem 4rem;
+        .img_container {
+            height: 100vh;
+            img {
+                height: 100vh;
+            }
+        }
+        p {
+            text-align: justify;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.related_posts {
+    margin-bottom: 3.5rem;
+    padding: 0 1vw;
+    h1 {
+        font-family: 'Open Sans Bold';
+        font-size: 1.2rem;
+        line-height: 127.1%;
+        letter-spacing: 0.015em;
+        margin-bottom: 1rem;
+    }
+    .related_story_card {
+        border: 1px solid rgba($agro_color-black, 0.54);
+        box-sizing: border-box;
+        overflow: hidden;
+        height: 14rem;
+        margin-bottom: 2rem;
+        .post_info {
+            padding: .5rem;
+            width: calc(100vw - 40vw - 2vw); //full screen width minus image minus card padding
+            h1 {
+                font-family: 'Open Sans';
+                font-weight: 600;
+                font-size: 1rem;
+                line-height: 127.1%;
+                letter-spacing: 0.015em;
+                margin-bottom: .5rem;
+            }
+            .post_info_sub {
+                margin-bottom: .5rem;
+                img {
+                    width: .8rem;
+                }
+                p {
+                    margin: 0;
+                    font-family: "Open Sans";
+                    font-size: .7rem;
+                    line-height: 127.1%;
+                    letter-spacing: 0.015em;
+                }
+            }
+            .btn {
+                background-color: $agro_color-gray-2;
+                border-radius: 1rem;
+                color: $agro_color-white;
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: .9rem;
+                line-height: .3rem;
+                letter-spacing: 0.015em;
+                width: 6rem;
+                height: 1.2rem;
+                text-transform: lowercase;
+            }
+        }
+        .card_background_image {
+            height: 100%!important;
+            width: 40rem!important;
+            max-width: 40vw!important;
+            background-size: cover!important;
+            background-position: center!important;
+        }
+    }
+    @media (min-width: 576px) {
+        padding: 0 calc(10vw - 1rem);
+    }
+    @media (min-width: 768px) {
+        padding: 0 10vw;
+    }
+    @media (min-width: 992px) {}
+    @media (min-width: 1200px) {
+        margin-bottom: 7rem;
+        padding: 0 16vw;
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .related_story_card {
+            height: 20rem;
+            .post_info {
+                padding: 2rem;
+                width: calc(100vw - 27rem - 32vw); //full screen width minus image minus card padding
+                h1 {
+                    font-size: 1.7vw;
+                }
+                .post_info_sub {
+                    margin-bottom: 1rem;
+                    p {
+                        margin: 0 .75rem;
+                        font-size: 1.125rem;
+                    }
+                }
+                .btn {
+                    font-size: 1.5rem;
+                    line-height: .75rem;
+                    width: 13rem;
+                    height: 1.75rem;
+                    margin: 2rem 0;
+                }
+            }
+            .card_background_image {
+                height: 100%!important;
+                width: 27rem!important;
+                max-width: 40vw!important;
+                background-size: cover!important;
+                background-position: center!important;
+            }
+        }
+    }
+}

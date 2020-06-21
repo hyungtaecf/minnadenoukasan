@@ -1,0 +1,18 @@
+{% load static %}
+<div class="article_card d-flex flex-column">
+  <div class="card_background_image" style="background: url({% get_media_prefix %}{{ article.image }}) no-repeat;"></div>
+  <div class="post_info">
+    <div class="outer d-flex align-items-end">
+      <h1>{{ article.title }}</h1>
+    </div>
+    <div class="d-flex post_info_sub">
+      <img src="{% static 'img/create_icon.svg' %}" alt="[pencil]">
+      <p>By {{ article.author }}</p>
+    </div>
+    <div class="d-flex post_info_sub">
+      <img src="{% static 'img/clock.svg' %}" alt="[pencil]">
+      <p>{{ article.publish_date }}</p>
+    </div>
+    <a href="{% url 'blog:post_detail' slug=article.slug %}" class="btn">read</a>
+  </div>
+</div>

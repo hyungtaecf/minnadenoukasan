@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Abhaya Libre";
+  src: url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff2") format("woff2"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff") format("woff"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Abhaya Libre Bold";
+  src: url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff2") format("woff2"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff") format("woff"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Alegreya Sans SC";
+  src: url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2") format("woff2"), url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff") format("woff"), url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Allerta Stencil";
+  src: url("../fonts/allerta-stencil-v10-latin-regular.woff2") format("woff2"), url("../fonts/allerta-stencil-v10-latin-regular.woff") format("woff"), url("../fonts/allerta-stencil-v10-latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Hind Madurai";
+  src: url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff2") format("woff2"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff") format("woff"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Hind Madurai Bold";
+  src: url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff2") format("woff2"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff") format("woff"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-all-regular.woff2") format("woff2"), url("../fonts/opensans-all-regular.woff") format("woff"), url("../fonts/opensans-all-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/opensans-all-700.woff2") format("woff2"), url("../fonts/opensans-all-700.woff") format("woff"), url("../fonts/opensans-all-700.ttf") format("ttf");
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.message_sent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.message_sent h2 {
+  font-family: "Abhaya Libre";
+  font-size: 4vw;
+  line-height: 127.1%;
+  text-align: center;
+  letter-spacing: 0.015em;
+  margin: 5vw 0;
+}
+
+.message_sent h1 {
+  font-family: "Abhaya Libre";
+  font-size: 13vw;
+  line-height: 127.1%;
+  text-align: center;
+  letter-spacing: 0.015em;
+  margin-bottom: 5vw;
+}
+
+.message_sent .return_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 28.8vw;
+  width: 30.8vw;
+  font-family: "Abhaya Libre Bold";
+  font-size: 2.25vw;
+  line-height: 127.1%;
+  text-align: center;
+  letter-spacing: 0.015em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #000;
+  margin-bottom: 10vw;
+}
+/*# sourceMappingURL=message_sent.css.map */

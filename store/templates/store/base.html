@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% block styles %}{% endblock %}
+</head>
+
+<body>
+  <header>
+      <div class="d-flex flex-row">
+          <!-- BRAND LOGO -->
+          <div id="logo_part">
+              <a href="{% url 'index' %}">
+                  <img src="{% static 'img/logo_agrotech_food.png' %}" alt="Agrevo Store Logo">
+              </a>
+          </div>
+          <!-- !BRAND LOGO -->
+
+          <div id="header_middle" class="d-flex flex-column justify-content-center">
+              <div class="d-flex flex-row align-items-center">
+                  <!-- Navegation Buttons -->
+                  <nav class="d-flex flex-row justify-content-between" id="nav_buttons">
+                      <a href="">Business Declaration</a>
+                      <a href="">Company Info.</a>
+                      <a href="">IR Info.</a>
+                      <a href="">Employment Info.</a>
+                      <a href="">Media & Release</a>
+                  </nav>
+                  <!-- !Navegation Buttons -->
+
+                  <!-- Number of registered buyer members -->
+                  <div id="registered_members">
+                      <div class="bg_inverted">Registered Buyer Members</div>
+                      <div class="no_of_members"><span>As of June 3, <span class="highlighted">163,369</span> companies</span>
+                      </div>
+                  </div>
+                  <!-- !Number of registered buyer members -->
+              </div>
+
+              <!-- Navegation Links -->
+              <nav id="top_nav_links" class="justify-content-around">
+                  <a href="">Get Started</a>
+                  <a href="">Registration</a>
+                  <a href="">My Page</a>
+                  <a href="">Branching Resources</a>
+                  <a href="">Open Store</a>
+                  <a href="">Sitemap</a>
+                  <a href="">Contact</a>
+                  <a href="">Blog</a>
+              </nav>
+              <!-- !Navegation Links -->
+          </div>
+
+          <!-- Message in the top right -->
+          <div id="top_message" class="d-flex flex-column">
+              <div class="title">Thank you for listing</div>
+              <div class="message">We are pleased to announce that we are listed on the Tokyo Stock Exchange Mothers. We will continue to provide useful services for everyone.</div>
+          </div>
+          <!-- !Message in the top right -->
+      </div>
+  </header>
+  <main>
+  {% block content %}{% endblock %}
+  </main>
+  <footer>
+      <nav class="navbar navbar-expand navbar-light justify-content-center">
+          <ul class="navbar-nav justify-content-between">
+            <li class="nav-item">
+              <a class="nav-link" href="{% if not url_name == 'index' %}{% url 'index' %}{% endif %}#about_us">about us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% if not url_name == 'index' %}{% url 'index' %}{% endif %}#vision">vision</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% if url_name == 'index' %}#news{% else %}{% url 'blog:post_list' %}{% endif %}">news</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% if not url_name == 'index' %}{% url 'index' %}{% endif %}#technology">technology</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% if not url_name == 'index' %}{% url 'index' %}{% endif %}#contact">contact</a>
+            </li>
+          </ul>
+      </nav>
+      <div class="d-flex justify-content-center">
+          <a href="https://www.facebook.com/Agrevo-Life-108834874134521/?modal=admin_todo_tour">
+              <div class="svg-container">
+                <svg viewBox="0 0 22 22" preserveAspectRatio="xMinYMin meet" class="svg-content">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66671 1.8335H18.3334C19.3459 1.8335 20.1667 2.65431 20.1667 3.66683V18.3335C20.1667 19.346 19.3459 20.1668 18.3334 20.1668H3.66671C2.65419 20.1668 1.83337 19.346 1.83337 18.3335V3.66683C1.83337 2.65431 2.65419 1.8335 3.66671 1.8335ZM3.66671 3.6669V18.3336H18.3334V3.6669H3.66671ZM10.2053 11.0041H11.9167V16.5001H13.75V11.0041H15.5673V9.17079H13.75V8.25009C13.75 7.74383 14.1604 7.33343 14.6667 7.33343H15.5834V5.50009H14.6667C13.1479 5.50009 11.9167 6.73131 11.9167 8.25009V9.17079H10.2053V11.0041Z"/>
+                </svg>
+              </div>
+          </a>
+      </div>
+  </footer>
+  {% block scripts %}{% endblock %}
+</body>
+
+</html>

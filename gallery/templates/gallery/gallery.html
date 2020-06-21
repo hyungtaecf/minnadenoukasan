@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Gallery{% endblock %}
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href='{% static "css/gallery_list.css" %}'>
+{% endblock %}
+{% block content %}
+<div class="heading d-flex justify-content-center">
+  <div>
+    <h1 class="text-center pb-5">Gallery</h1>
+    {% if user.is_staff %}
+      <a href="{% url 'gallery:upload' %}" class="btn btn-success w-100 mb-5">Upload Images</a>
+    {% endif %}
+  </div>
+</div>
+<div class="bg pb-5">
+  <div class="gallery" id="gallery">
+    {% for gallery_image in gallery %}
+      <div class="gallery-item">
+          <div class="content"><img onload="resizeAll()" src="{% get_media_prefix %}{{gallery_image.image}}" alt="{{gallery_image.title}}"></div>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+  <script src='{% static "js/gallery_list.js" %}' charset="utf-8"></script>
+{% endblock %}

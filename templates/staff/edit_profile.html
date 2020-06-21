@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="container min-vh-100">
+<h1>Profile</h1>
+
+  {% bootstrap_messages %}
+
+<div class="row">
+<div class="col-md-6 col-lg-6">
+
+  <form action="{% url 'edit_profile' %}" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      {% bootstrap_icon "star" %} Submit
+    </button>
+    {% endbuttons %}
+
+  </form>
+</div>
+</div>
+</div>
+
+{% endblock %}

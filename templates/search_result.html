@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% load hitcount_tags %}
+{% block title %}Results for "{{input}}"{% endblock %}
+{% block styles %}<link rel="stylesheet" type="text/css" href='{% static "css/search_result.css" %}'>{% endblock %}
+{% block content %}
+
+<section class="related_posts">
+{% if result|length > 0 %}
+  <h1 class="section_title mb-5">{{result|length}} Result{{ result|pluralize }} for "{{input}}":</h1>
+{% else %}
+  <h1 class="section_title mb-5">No Results for "{{input}}".</h1>
+{% endif %}
+  {% for article in result %}
+    {% if not article.pk == post.pk %}
+      {% include "_post_preview-1.html" %}
+    {% endif %}
+  {% endfor %}
+
+  {% if showGoToLogin %}
+  <div>
+    <p>Are you looking for the login page?</p>
+    <a href="{% url 'account_login' %}" class="btn btn-success">Sign In</a>
+  </div>
+  {% endif %}
+</section>
+
+{% endblock %}

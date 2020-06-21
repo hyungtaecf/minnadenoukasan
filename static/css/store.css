@@ -1,0 +1,513 @@
+@font-face {
+  font-family: "Abhaya Libre";
+  src: url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff2") format("woff2"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff") format("woff"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Abhaya Libre Bold";
+  src: url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff2") format("woff2"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff") format("woff"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Alegreya Sans SC";
+  src: url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2") format("woff2"), url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff") format("woff"), url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Allerta Stencil";
+  src: url("../fonts/allerta-stencil-v10-latin-regular.woff2") format("woff2"), url("../fonts/allerta-stencil-v10-latin-regular.woff") format("woff"), url("../fonts/allerta-stencil-v10-latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Hind Madurai";
+  src: url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff2") format("woff2"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff") format("woff"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Hind Madurai Bold";
+  src: url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff2") format("woff2"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff") format("woff"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-all-regular.woff2") format("woff2"), url("../fonts/opensans-all-regular.woff") format("woff"), url("../fonts/opensans-all-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/opensans-all-700.woff2") format("woff2"), url("../fonts/opensans-all-700.woff") format("woff"), url("../fonts/opensans-all-700.ttf") format("ttf");
+}
+
+footer {
+  height: 19.75vmax;
+  background-color: #1F6633;
+}
+
+footer .navbar {
+  height: 13.7vmax;
+}
+
+footer .navbar .navbar-nav {
+  width: auto;
+}
+
+footer .navbar .nav-item {
+  margin: 0 2vmax;
+  padding: 0;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+footer .navbar .nav-item .nav-link {
+  font-family: "Alegreya Sans SC";
+  font-size: 1.5vmax;
+  color: #FFF;
+}
+
+footer .navbar .nav-item .nav-link:hover, footer .navbar .nav-item .nav-link:active, footer .navbar .nav-item .nav-link:focus {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+footer .svg-container {
+  display: inline-block;
+  position: relative;
+  width: 5vw;
+  padding-bottom: 100%;
+  vertical-align: middle;
+}
+
+footer .svg-container .svg-content {
+  display: inline-block;
+  position: absolute;
+  top: -2vw;
+  left: 0;
+}
+
+footer .svg-container .svg-content path {
+  fill: #FFF;
+}
+
+@media (max-width: 992px) {
+  footer .navbar-nav {
+    width: 100% !important;
+  }
+  footer .navbar-nav .nav-item {
+    margin: 0 .5vw;
+    padding: 0;
+    letter-spacing: 0.015em;
+  }
+  footer .navbar-nav .nav-item .nav-link {
+    font-size: 3vw;
+    white-space: nowrap;
+  }
+  footer .navbar-nav .nav-item .nav-link:hover, footer .navbar-nav .nav-item .nav-link:active, footer .navbar-nav .nav-item .nav-link:focus {
+    text-decoration: underline;
+  }
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  max-width: 100vw;
+}
+
+body ::-moz-selection {
+  background-color: rgba(31, 102, 51, 0.2);
+}
+
+body ::selection {
+  background-color: rgba(31, 102, 51, 0.2);
+}
+
+header a,
+main a {
+  color: #000;
+}
+
+header a:hover, header a:focus,
+main a:hover,
+main a:focus {
+  color: #1F6633;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+header {
+  padding: 2rem 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header #logo_part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #logo_part img {
+  height: 5rem;
+}
+
+header #header_middle #nav_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+}
+
+header #header_middle #nav_buttons a {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.5rem;
+  width: 5rem;
+  padding: .5rem;
+  font-size: .7rem;
+  border: solid 0.1rem #1F6633;
+  background-color: #FFF;
+  color: #1F6633;
+  font-weight: bold;
+  border-radius: .8rem;
+  margin: 0 .5rem;
+}
+
+header #header_middle #nav_buttons a:hover, header #header_middle #nav_buttons a:focus {
+  color: #FFF;
+  background-color: #1F6633;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: .1s ease-out;
+  transition: .1s ease-out;
+  padding: 2.5rem 0;
+}
+
+header #header_middle #registered_members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.25rem solid #1F6633;
+  font-size: .8rem;
+  border-radius: .5rem;
+  margin: 0 3rem;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+header #header_middle #registered_members .bg_inverted,
+header #header_middle #registered_members .no_of_members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .5rem;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #header_middle #registered_members .bg_inverted {
+  font-weight: bold;
+  color: #FFF;
+  background-color: #1F6633;
+}
+
+header #header_middle #registered_members .no_of_members .highlighted {
+  font-weight: bold;
+  font-size: 120%;
+  color: #1F6633;
+}
+
+header #header_middle #top_nav_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .8rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
+  width: 50rem;
+  height: 6rem;
+}
+
+header #header_middle #top_nav_links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+header #header_middle #top_nav_links a:hover, header #header_middle #top_nav_links a:focus {
+  background-color: rgba(31, 102, 51, 0.05);
+  margin: 0 1rem;
+}
+
+header #top_message {
+  height: 12rem;
+  min-height: 70%;
+  width: 16rem;
+  border: 0.25rem solid #EDDDB4;
+  border-radius: .5rem;
+  font-size: .8rem;
+}
+
+header #top_message .title {
+  color: #FFF;
+  background-color: #EDDDB4;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+header #top_message .message {
+  padding: .5rem;
+  text-align: center;
+}
+
+main #superior_section #top_bar {
+  font-size: .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #C4C4C4;
+  padding: 1rem 10rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #superior_section #top_bar .top_bar_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 80rem;
+}
+
+main #superior_section #top_bar #top_notices {
+  border-radius: .5rem;
+  background-color: #FFF;
+}
+
+main #superior_section #top_bar #top_notices .title,
+main #superior_section #top_bar #top_notices .notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .4rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #superior_section #top_bar #top_notices .title {
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  background-color: #1F6633;
+  color: #FFF;
+  font-weight: bold;
+}
+
+main #superior_section #top_bar #top_notices .notice a {
+  margin: 0 .2rem;
+}
+
+main #superior_section #top_bar form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #superior_section #top_bar form select {
+  padding: .4rem;
+  width: 11rem;
+  margin: 0 .5rem;
+  border-radius: .5rem;
+  border: none;
+}
+
+main #superior_section #top_bar form input {
+  padding: .4rem;
+  width: 11rem;
+  margin-left: .5rem;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  border: none;
+}
+
+main #superior_section #top_bar form .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  font-size: .8rem;
+  background-color: #1F6633;
+  color: #FFF;
+  font-weight: bold;
+}
+
+main #superior_section #superior_section_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 5rem;
+}
+
+main #superior_section #superior_section_main #superior_section_center {
+  padding: 0 1rem;
+}
+
+main #superior_section #superior_section_main #superior_section_center #top_banners img {
+  margin: 0 .5rem;
+  height: 175px;
+  width: 320px;
+}
+
+main #superior_section #superior_section_main #superior_section_center .text-center {
+  color: red;
+  font-size: .8rem;
+  padding: .5rem;
+  border-bottom: solid 0.25rem #C4C4C4;
+  margin-bottom: .5rem;
+}
+
+main #superior_section #superior_section_main #superior_section_center #inferior_ads {
+  width: 13rem;
+}
+
+main #superior_section #superior_section_main #superior_section_center #inferior_ads img {
+  max-width: 100%;
+}
+
+main #superior_section #superior_section_main #superior_section_center .prod_ads {
+  padding: .5rem;
+}
+
+main #superior_section #superior_section_main #superior_section_center .prod_ads img {
+  margin: .25rem;
+}
+
+main #superior_section #superior_section_main #superior_section_center .prod_ads .smaller a:nth-child(odd) img {
+  margin: .25rem;
+}
+
+main #superior_section #superior_section_main #superior_section_center .prod_ads .smaller a:nth-child(even) img {
+  margin: .25rem 0;
+}
+
+main #superior_section #superior_section_main #superior_section_center #food_industry_news {
+  border: 0.25rem solid #EDDDB4;
+  border-radius: .5rem;
+}
+
+main #superior_section #superior_section_main #superior_section_center #food_industry_news .title {
+  padding: .5rem;
+  background-color: #EDDDB4;
+  color: #FFF;
+  text-align: center;
+  font-weight: bold;
+}
+
+main #superior_section #superior_section_main #superior_section_center #food_industry_news ul {
+  padding: 1rem;
+  height: 15rem;
+  width: 20rem;
+  overflow-y: scroll;
+}
+
+main #superior_section #superior_section_main #superior_section_center #food_industry_news .see_more {
+  display: block;
+  padding: 0 1rem 1rem;
+  text-align: right;
+  width: 100%;
+}
+
+main #superior_section #superior_section_main #superior_section_center .links {
+  margin: 1rem;
+  border-top: solid 0.25rem #C4C4C4;
+}
+
+main #superior_section #superior_section_main #superior_section_center .links a {
+  background-color: rgba(31, 102, 51, 0.05);
+  padding: .5rem;
+  margin: 1.5rem 0;
+  font-size: .8rem;
+}
+
+main #superior_section #superior_section_main #right_banners img {
+  margin-bottom: 3rem;
+}
+
+main #product_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: solid 0.5rem #1F6633;
+  border-bottom: solid 0.5rem #1F6633;
+  padding: 2rem 0;
+}
+
+main #product_slider img {
+  margin: .75rem;
+}
+/*# sourceMappingURL=store.css.map */

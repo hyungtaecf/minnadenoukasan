@@ -1,0 +1,48 @@
+@import './variables';
+@import './fonts';
+html {
+    min-height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.message_sent {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    h2 {
+        font-family: "Abhaya Libre";
+        font-size: 4vw;
+        line-height: 127.1%;
+        text-align: center;
+        letter-spacing: 0.015em;
+        margin: 5vw 0;
+    }
+    h1 {
+        font-family: "Abhaya Libre";
+        font-size: 13vw;
+        line-height: 127.1%;
+        text-align: center;
+        letter-spacing: 0.015em;
+        margin-bottom: 5vw;
+    }
+    .return_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover!important;
+        background-position: center!important;
+        height: 28.8vw;
+        width: 30.8vw;
+        font-family: "Abhaya Libre Bold";
+        font-size: 2.25vw;
+        line-height: 127.1%;
+        text-align: center;
+        letter-spacing: 0.015em;
+        text-decoration-line: underline;
+        color: $agro_color-black;
+        margin-bottom: 10vw;
+    }
+}

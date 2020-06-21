@@ -1,0 +1,358 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'photobox/photobox.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'photobox/photobox.ie.css' %}">
+{% endblock %}
+
+{% block main_content %}
+        <!-- AGROTECH FOOD revolution -->
+        <section id="launching" class="d-flex">
+            <div class="d-flex w-100 mx-auto">
+              <div class="d-flex flex-column w-100 launching_content justify-content-center">
+                <h1>agrotech food</h1>
+                <h2>revolution</h2>
+              </div>
+            </div>
+            <div class="img_container">
+              <img src={% static "img/top2.jpg" %} alt="Image - two people planting">
+            </div>
+        </section>
+        <!-- !END AGROTECH FOOD revolution -->
+
+        <!-- Welcome -->
+        <section id="welcome">
+            <div class="welcome_content mx-auto h-100">
+                <div class="d-flex flex-column justify-content-center">
+                    <div class="mx-auto">
+                        <h2>Welcome</h2>
+                    </div>
+                    <p>「第4次産業革命」に基づく人類の未来を一緒に発見しましょう。</p>
+                </div>
+            </div>
+        </section>
+        <!-- !END Welcome -->
+
+        <!-- About us -->
+        <section id="about_us" class="d-flex flex-row">
+            <div class="row">
+                <div class="col-lg-5 about_us-left d-none d-lg-block">
+                    <div class="background_image" style="background-image: url({% static "img/about_us_new.png" %});"></div>
+                </div>
+                <div class="col-lg-7 about_us-right" style="background-image: url({% static "img/about_us_new.png" %});">
+                    <div class="upper">
+                        <h2>About us</h2>
+                        <p>凍結解凍覚醒法（FTAT)とは、日本で発明された今までの農業を革新しうる技術です。この特許を取得した技術を施した種子から育つ植物の継続的な研究と更なる開発、生産、提供を通じて、世界の農業に革命を起こし、世界の食糧と環境問題の解決に貢献することを約束します。</p>
+                        <p>そして、</p>
+                        <ul>
+                            <li>食料自給率の改善を目指し、作物の生産効率を向上させ、 世界的な食料不足の解決を目指します</li>
+                            <li>人間の免疫力を向上させる健康的な食品を生産し、 将来の健康問題解決に取り組みます</li>
+                        </ul>
+                    </div>
+                    <div class="lower d-flex flex-column-reverse align-items-end">
+                        <img class="d-none d-lg-block" src='{% static "img/7be49492bd97cc2cf9371d24b4a0674e_s.jpg" %}' alt="Banana on a leaf">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- !END About us -->
+
+        <!-- Vision -->
+        <section id="vision">
+            <div class="upper d-flex flex-row">
+                <div class="upper_pic">
+                    <img src='{% static "img/jigyo88.jpg" %}' alt="Happy black kids">
+                </div>
+                <div class="title my-auto">
+                    <h2>Vision</h2>
+                </div>
+            </div>
+            <div class="lower d-flex flex-row">
+                <div class="vision_content">
+                    <p>・凍結解凍覚醒法（FTAT）を使い、農作物の生産性向上と 食糧自給率生産を改善することにより、世界的食糧危機 の解決を目指します</p>
+                    <p>・FTATは、高温・寒冷地での効率的な農業生産を改善し、 農家の経済発展に貢献します</p>
+                    <p>・有機野菜の生産性を高め、多くの人の元へ健康な食品を 届ける事により、健康な社会の発展を目指します</p>
+                </div>
+                <div class="lower_pic d-none d-xl-block">
+                    <img src='{% static "img/830x495komugi 1.png" %}' alt="Greenhouse">
+                </div>
+            </div>
+        </section>
+        <!-- !END Vision -->
+
+        <!-- News -->
+        <section id="news" class="container">
+            <div class="d-flex justify-content-center title">
+                <h2>News</h2>
+            </div>
+            <div class="row">
+                {# {% for article in most_recent|slice:":2" %}{% endfor %} #}
+                  <div class="col-lg-6 col_spacing">
+                    <div class="card_background_image" style="background: url({% get_media_prefix %}{{ article_1.image }}) no-repeat;">
+                      <div class="card">
+                        <div class="tag d-flex align-items-center position-absolute">
+                          {# TODO: Register tags and show related in the detail view #}
+                          <p>harvest</p>
+                        </div>
+                        <div class="card-img-top d-none d-lg-block">
+                          <img src='{% get_media_prefix %}{{ article_1.image }}' alt="{{article_1.title}}">
+                        </div>
+                        <div class="card-body"></div>
+                        <p class="card-text">“{{ article_1.title }}”</p>
+                        <a href="{% url 'blog:post_detail' slug=article_1.slug %}" class="btn">read</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col_spacing">
+                    <div class="card_background_image" style="background: url({% get_media_prefix %}{{ article_2.image }}) no-repeat;">
+                      <div class="card">
+                        <div class="tag d-flex align-items-center position-absolute">
+                          <p>harvest</p>
+                        </div>
+                        <div class="card-img-top d-none d-lg-block">
+                          <img src='{% get_media_prefix %}{{ article_2.image }}' alt="{{article_2.title}}">
+                        </div>
+                        <div class="card-body"></div>
+                        <p class="card-text">“{{ article_2.title }}”</p>
+                        <a href="{% url 'blog:post_detail' slug=article_2.slug %}" class="btn">read</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="d-flex justify-content-center btn_more">
+                <a href="{% url 'blog:post_list' %}" class="btn">more..</a>
+            </div>
+        </section>
+        <!-- !END News -->
+
+        <!-- Technology -->
+        <section id="technology" style="background-image: url({% static 'img/830_11.jpg' %});">
+            <div class="technology_content d-flex flex-column">
+                <div class="d-flex justify-content-center">
+                    <h2>Technology</h2>
+                </div>
+                <p>凍結解凍覚醒法（FTAT）は、田中節三教授が日本で発明した画期的な技術です。細胞または種子を-60℃の温度で凍結するする事により、種子と細胞は低温処理により擬似的な氷河期を経験し、植物のゲノムにコード化された環境情報の初期化を引き起こします。これにより、さまざまな環境への適応性が向上します。遺伝子組換え技術とは対照的に、この技術は、植物にゲノム自体を変更することなく、高温および低温へのより優れた耐性、ならびに害虫および昆虫に対する耐性を発揮します。さらに、凍結解凍覚醒法は、技術を施した植物の成長速度を向上させ、より高い作物収量を可能にします。この技術は環境と健康に無害であり、有機的に成長し、異なる地域、温帯で熱帯植物を安定して栽培することを可能にします。この技術の再現性は、これまでに230を超えるさまざまな種類の植物で証明されています。</p>
+            </div>
+        </section>
+        <!-- !END Technology -->
+
+        {# Photo Gallery #}
+        <section id="gallery" class="d-flex justify-content-center">
+          <div class="position-relative">
+
+            <div class="d-flex justify-content-center title">
+                <h2>Gallery</h2>
+            </div>
+
+            <button type="button" id="prev" onClick="showPrevious()"><</button>
+            <button type="button" id="next" onClick="showNext()">></button>
+            <div class="w">
+              <div class="ts">
+                {% for gallery_image in gallery %}
+                <input type="radio" id="c{{forloop.counter}}" name="ts" {% if forloop.counter == 1 %}checked="checked"{% endif %}/>
+                <label class="t" for="c{{forloop.counter}}"><img src="{% get_media_prefix %}{{ gallery_image.image }}" alt="{{ gallery_image.title }}"/></label>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="d-flex justify-content-center btn_more">
+                <a href="{% url 'gallery:index' %}" class="btn">more..</a>
+            </div>
+          </div>
+        </section>
+
+
+        {% comment %}
+
+        <div id='gallery'>
+          {% for gallery_image in gallery %}
+            <a href="">
+                <img src="{% get_media_prefix %}{{ gallery_image.image }}"
+                    title="{{ gallery_image.title }}">
+            </a>
+          {% endfor %}
+          {% endcomment %}
+
+          {% comment %}
+
+          <a href="http://www.somedomain.com/images/image1_large.jpg">
+              <img src="http://www.somedomain.com/images/image1_small.jpg"
+                  title="photo1 title">
+          </a>
+          <a href="http://www.somedomain.com/images/image2_large.jpg">
+              <img src="http://www.somedomain.com/images/image2_small.jpg"
+                  alt="photo2 title">
+          </a>
+          <a href="http://www.somedomain.com/images/image3_large.jpg">
+              <img src="http://www.somedomain.com/images/image3_small.jpg"
+                  title="photo3 title">
+          </a>
+          <a href="http://www.somedomain.com/images/image4_large.jpg">
+              <img src="http://www.somedomain.com/images/image4_small.jpg"
+                  alt="photo4 title" data-pb-captionLink='Google website[www.google.com]'>
+          </a>
+          <a href="http://www.youtube.com/embed/W3OQgh_h4U4" rel="video">
+              <img src="http://img.youtube.com/vi/W3OQgh_h4U4/0.jpg"
+                  title="PEOPLE ARE AWESOME 2013 FULL HD ">
+          </a>
+          {% endcomment %}
+
+      </div>
+
+        {# !END Photo Gallery #}
+
+
+
+        <!-- Contact us / Q&A -->
+        <section id="contact" style="background:url({% static 'img/mundi.png' %}) no-repeat">
+                <div class="contact_content col-10 col-lg-6">
+                    <h2>お問い合わせ</h2>
+                    <div class="row">
+                        <div class="col-1">
+                            <div class="svg-container">
+                                <svg viewBox="0 0 13 13" preserveAspectRatio="xMinYMin meet" class="svg-content">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66253 12.2144L6.5 12.9533L7.33747 12.2144C10.0117 9.85487 11.375 7.75896 11.375 5.79703C11.375 3.01166 9.21589 0.887695 6.5 0.887695C3.78411 0.887695 1.625 3.01166 1.625 5.79703C1.625 7.75896 2.98829 9.85487 5.66253 12.2144ZM6.5 2.46937C8.32074 2.46937 9.75 3.87536 9.75 5.7699C9.75 7.11296 8.69538 8.78139 6.5 10.7684C4.30462 8.78139 3.25 7.11296 3.25 5.7699C3.25 3.87536 4.67926 2.46937 6.5 2.46937ZM6.5 3.29276C7.84619 3.29276 8.9375 4.37448 8.9375 5.70886C8.9375 7.04323 7.84619 8.12496 6.5 8.12496C5.15381 8.12496 4.0625 7.04323 4.0625 5.70886C4.0625 4.37448 5.15381 3.29276 6.5 3.29276ZM5.6875 5.67399C5.6875 5.20903 6.05127 4.8321 6.5 4.8321C6.94873 4.8321 7.3125 5.20903 7.3125 5.67399C7.3125 6.13896 6.94873 6.51588 6.5 6.51588C6.05127 6.51588 5.6875 6.13896 5.6875 5.67399Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <p>東京都世田谷区千歳代4-6-5</p>
+                        </div>
+                        <div class="col-1">
+                            <div class="svg-container">
+                                <svg viewBox="0 0 14 13" preserveAspectRatio="xMinYMin meet" class="svg-content">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75004 1.68384H12.25C12.8944 1.68384 13.4167 2.16401 13.4167 2.75633V10.2637C13.4167 10.8561 12.8944 11.3362 12.25 11.3362H1.75004C1.10571 11.3362 0.583374 10.8561 0.583374 10.2637V2.75633C0.583374 2.16401 1.10571 1.68384 1.75004 1.68384ZM1.75004 5.25185V10.2517H12.25V5.25209L7.00003 7.70975L1.75004 5.25185ZM1.75004 4.03061L7.00006 6.48852L12.25 4.03087V2.74433H1.75004V4.03061Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <p>info@agrevo.life</p>
+                        </div>
+                        <div class="col-1 d-none">
+                            <div class="svg-container">
+                                <svg viewBox="0 0 30 28" preserveAspectRatio="xMinYMin meet" class="svg-content">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.269 14.6798C13.2536 13.7312 12.4144 12.7062 11.9692 11.8758C11.823 11.6032 11.732 11.3744 11.6921 11.2109L12.5927 10.3698C12.7903 10.1853 12.8853 10.0954 13.008 9.97499C13.2681 9.7199 13.4849 9.48679 13.6757 9.24688C14.5338 8.16759 14.8527 6.99265 13.8369 5.93466C11.9136 3.42367 10.6197 1.87061 9.79018 1.10583C8.07856 -0.472184 5.28998 -0.260785 3.80558 1.10427C3.08883 1.7634 2.84519 1.99067 2.10922 2.68835C-2.18893 6.70191 0.374497 14.9994 7.14761 21.3269C13.9196 27.6533 22.8104 30.0473 27.1199 26.023C27.7964 25.4144 28.3746 24.8746 28.832 24.4234C30.2801 22.9949 30.4988 20.5043 28.821 18.8773C28.0231 18.1036 26.4365 16.9545 23.6302 15.0806C22.6037 14.2312 21.4031 14.4155 20.3364 15.0686C19.856 15.3628 19.5179 15.6505 18.8814 16.2451L17.9817 17.0853C17.8067 17.048 17.562 16.9632 17.2703 16.8269C16.381 16.4112 15.2836 15.6277 14.269 14.6798ZM20.4149 20.0224L21.5324 18.9788C21.7233 18.8005 21.8743 18.663 21.9991 18.555C24.2618 20.0774 25.5859 21.0455 26.1206 21.5641C26.3024 21.7404 26.2689 22.122 26.1096 22.2792C25.696 22.6872 25.1566 23.1909 24.4937 23.7876C22.0472 26.0717 15.3019 24.2554 9.79896 19.1145C4.29389 13.9716 2.34837 7.67417 4.76992 5.41291C5.50209 4.71891 5.73236 4.50411 6.43598 3.85705C6.5477 3.75431 7.00874 3.71936 7.15639 3.85549C7.73396 4.38798 8.81541 5.67445 10.3961 7.72059C10.3637 7.75357 10.3293 7.78789 10.2929 7.82358C10.1978 7.91682 10.1177 7.9926 9.94136 8.15738C9.58688 8.4885 9.43212 8.63306 9.27734 8.77758C9.1574 8.88957 9.03745 9.00153 8.82456 9.20026C6.6743 11.2069 8.38065 14.3893 11.6176 17.4133C14.8527 20.4355 18.2647 22.0303 20.4149 20.0224Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-11 d-none">
+                            <p>03-6555-3580</p>
+                        </div>
+                    </div>
+                    <form method="POST">
+                      {% csrf_token %}
+                        <div class="form-group"><label for="name">お名前</label>
+                            <input class="form-control" name="name" type="text" value="{{ name }}">
+                        </div>
+                        <div class="form-group"><label for="email">メールアドレス</label>
+                            <input class="form-control" name="email" type="text" value="{{ email }}"></div>
+
+                        <div class="form-group"><label for="question">質問</label>
+                            <textarea class="form-control" name="question" id="question" value="{{ question }}" cols="30" rows="10"></textarea></div>
+                        <div class="d-flex justify-content-end button_area">
+                            <button type="submit" class="btn">送信</button>
+                        </div>
+                    </form>
+                </div>
+        </section>
+        <!-- !END Contact us / Q&A -->
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static "js/gallery.js" %}" charset="utf-8"></script>
+
+  <script type="text/javascript">
+  /*
+  *  IMPORTANT: This script is an extension of the gallery.js script, and it
+  *  is here just for convinience in order to use Django templates features
+  */
+  function appendToImageList(gallery_image, index) {
+    var html=`<input type="radio" id=c`+(index+1)+` name="ts" `
+    if (index == 0) html+=`checked="checked"`
+    html+=`/>
+      <label class="t" for="c`+(index+1)+`"><img src="{% get_media_prefix %}`
+      +gallery_image.image+`" alt="`+gallery_image.title+`"/></label>
+      `
+    $(".ts:last-child").append(html);
+  }
+  function showPrevious() {
+    for (var i = 0; i < els.length; i++) {
+        if (els[i].checked) {
+            if (i === 0) {
+                fromIndex -= displayingItemsNumber
+                toIndex -= displayingItemsNumber
+                while (toIndex - displayingItemsNumber != fromIndex)
+                    toIndex++
+                $.ajax({
+                    url: "{% url 'gallery:ajax_retrieve' %}",
+                    data: {
+                        'fromIndex': fromIndex,
+                        'toIndex': toIndex,
+                        dataType: 'json',
+                    },
+                    success: (data)=>{
+                      retrieveData(data)
+                      els[els.length - 1].checked = true;
+                      reorder(els[els.length - 1], els);
+                    }
+                })
+            } else {
+                els[i - 1].checked = true;
+                reorder(els[i - 1], els);
+            }
+            break;
+        }
+    }
+    timeToNextPicture = Date.now() + changingInterval;
+  }
+
+  function showNext() {
+    for (var i = els.length - 1; i >= 0; i--) {
+        if (els[i].checked) {
+            if (i === els.length - 1) {
+                fromIndex += displayingItemsNumber
+                toIndex += displayingItemsNumber
+                while (toIndex - displayingItemsNumber != fromIndex)
+                    toIndex++
+                $.ajax({
+                    url: "{% url 'gallery:ajax_retrieve' %}",
+                    data: {
+                        'fromIndex': fromIndex,
+                        'toIndex': toIndex,
+                        dataType: 'json',
+                    },
+                    success: (data)=>{
+                      retrieveData(data)
+                      els[0].checked = true;
+                      reorder(els[0], els);
+                    }
+                })
+            } else {
+                els[i + 1].checked = true;
+                reorder(els[i + 1], els);
+            }
+            break;
+        }
+    }
+    timeToNextPicture = Date.now() + changingInterval;
+  }
+  function retrieveData(data) {
+    fromIndex = data.fromIndex
+    toIndex = data.toIndex
+    var slicedListOfImages = []
+    let temp = JSON.parse(data.slicedListOfImages)
+    for (let i = 0; i < temp.length; i++) {
+        slicedListOfImages.push(temp[i].fields);
+    }
+    $('.ts').empty()
+    for (let i = 0; i < temp.length; i++) {
+        appendToImageList(slicedListOfImages[i], i);
+    }
+    initialize()
+  }
+  </script>
+{% endblock %}

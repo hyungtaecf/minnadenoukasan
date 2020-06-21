@@ -1,0 +1,40 @@
+$root:'../';
+@font-face {
+    font-family: "Abhaya Libre";
+    src: url($root+"fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff2") format("woff2"), url($root+"fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff") format("woff"), url($root+"fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Abhaya Libre Bold";
+    src: url($root+"fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff2") format("woff2"), url($root+"fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff") format("woff"), url($root+"fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Alegreya Sans SC";
+    src: url($root+"fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2") format("woff2"), url($root+"fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff") format("woff"), url($root+"fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Allerta Stencil";
+    src: url($root+"fonts/allerta-stencil-v10-latin-regular.woff2") format("woff2"), url($root+"fonts/allerta-stencil-v10-latin-regular.woff") format("woff"), url($root+"fonts/allerta-stencil-v10-latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Hind Madurai";
+    src: url($root+"fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff2") format("woff2"), url($root+"fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff") format("woff"), url($root+"fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Hind Madurai Bold";
+    src: url($root+"fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff2") format("woff2"), url($root+"fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff") format("woff"), url($root+"fonts/hind-madurai-v5-tamil_latin-ext_latin-600.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url($root+"fonts/opensans-all-regular.woff2") format("woff2"), url($root+"fonts/opensans-all-regular.woff") format("woff"), url($root+"fonts/opensans-all-regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url($root+"fonts/opensans-all-700.woff2") format("woff2"), url($root+"fonts/opensans-all-700.woff") format("woff"), url($root+"fonts/opensans-all-700.ttf") format("ttf");
+}

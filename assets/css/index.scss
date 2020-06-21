@@ -1,0 +1,931 @@
+@import './variables';
+@import './fonts';
+h2 {
+    font-family: "Open Sans Bold";
+    font-size: 4.5rem;
+}
+
+#launching {
+    height: 100vh;
+    background: $agro_color-1;
+    // position: relative;
+    .launching_content {
+        color: $agro_color-white;
+        text-align: center;
+        // padding: 0 2.75rem;
+        padding: 0 3vw;
+        min-width: 55vw;
+        h1 {
+            font-family: "Allerta Stencil";
+            font-size: 10.5vw;
+            max-width: 60%;
+            text-align: start;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-family: "Open Sans Bold";
+            width: 100%;
+            font-size: 5vw;
+            text-align: start;
+            font-weight: 700;
+            text-transform: lowercase;
+        }
+    }
+    .img_container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        max-width: 45vw;
+        overflow: hidden;
+        img {
+            position: absolute;
+            right: 0;
+            height: 100vh;
+        }
+    }
+    @media (max-width: 1350px) {
+        .launching_content h1 {
+            font-size: 9.5vw;
+        }
+    }
+    @media (max-width: 1200px) {
+        .launching_content h1 {
+            font-size: 9vw;
+        }
+    }
+    @media (max-width: 992px) {
+        height: 50vh;
+        .launching_content {
+            // max-width: 50vw;
+            h1 {
+                font-size: 10vw;
+            }
+        }
+        .img_container {
+            height: 50vh;
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
+
+#welcome {
+    height: 75vh;
+    .welcome_content {
+        display: flex;
+        max-height: 100%;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-family: "Open Sans Bold";
+            font-size: 4.5rem;
+            width: 24.7rem;
+            text-align: center;
+            border-bottom: .2rem solid $agro_color-2;
+        }
+        p {
+            padding: 3.3rem;
+            font-family: "Hind Madurai";
+            font-size: 2.25rem;
+            width: 60vw;
+            text-align: center;
+        }
+    }
+    @media (max-width: 992px) {
+        min-height: 50vh;
+        .welcome_content {
+            h2 {
+                font-size: 3.5rem;
+                width: 16rem;
+            }
+            p {
+                padding: 2rem;
+                font-size: 2rem;
+                width: 80vw;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .welcome_content {
+            h2 {
+                font-size: 2.5rem;
+                width: 13rem;
+            }
+            p {
+                padding: 1.5rem;
+                font-size: 1.5rem;
+                width: 80vw;
+            }
+        }
+    }
+}
+
+#about_us {
+    min-height: 65.1rem;
+    overflow: hidden;
+    position: relative;
+    .about_us-left {
+        .background_image {
+            height: 62.6rem;
+            margin-top: 2.5rem;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .about_us-right {
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        .upper {
+            padding: 0 1.5rem;
+            h2 {
+                height: 8.5rem;
+                width: 24rem;
+                margin-bottom: 2.3rem;
+                border-bottom: .2rem solid $agro_color-2;
+            }
+            p,
+            li {
+                font-size: 1.57rem;
+                letter-spacing: 0.015em;
+                list-style-type: none;
+                position: relative;
+            }
+            li::before {
+                content: '・';
+                position: absolute;
+                left: -2rem;
+                top: .2rem;
+                font-size: 2rem;
+            }
+        }
+        .lower {
+            img {
+                position: absolute;
+                bottom: 0;
+                height: 30vw;
+                max-width: 90%;
+            }
+        }
+        @media(min-width: 992px) {
+            background-image: none !important;
+        }
+        @media(max-width: 992px) {
+            display: flex;
+            justify-content: center;
+            .upper {
+                background: rgba($agro_color-white, 0.71);
+                margin: auto 1.5rem;
+                padding: 5rem;
+                h2 {
+                    height: 6.5rem;
+                    width: 60%;
+                    white-space: nowrap;
+                    border-bottom: .2rem solid $agro_color-2;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            .upper {
+                margin: auto 1.5rem;
+                padding: 2.5rem;
+                h2 {
+                    font-size: 2.5rem;
+                    height: 3rem;
+                    width: 50%;
+                    margin-bottom: 2rem;
+                    border-bottom: .2rem solid $agro_color-2;
+                }
+                p,
+                li {
+                    font-size: 1.25rem;
+                    font-family: Hind Madurai;
+                    font-weight: 500;
+                    line-height: 127.1%;
+                    /* or 15px */
+                    letter-spacing: 0.015em;
+                }
+            }
+        }
+        @media (max-width: 576px) {
+            .upper {
+                margin: auto 1.5rem;
+                padding: 2.5rem;
+                h2 {
+                    font-size: 1.75rem;
+                    height: 2.5rem;
+                    width: 50%;
+                    margin-bottom: 1.5rem;
+                    border-bottom: .2rem solid $agro_color-2;
+                }
+                p,
+                li {
+                    font-size: .75rem;
+                    font-family: Hind Madurai;
+                    font-weight: 500;
+                    line-height: 127.1%;
+                    /* or 15px */
+                    letter-spacing: 0.015em;
+                }
+                li::before {
+                    left: -1.5rem;
+                    top: .15rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    @media(max-width: 768px) {
+        min-height: 100vh;
+    }
+}
+
+#vision {
+    padding-top: 13.3rem;
+    .upper {
+        img {
+            width: 48.25rem;
+            height: 30.5rem;
+        }
+        .title {
+            width: 100%;
+            margin-left: 2rem;
+            margin-right: 8.6rem;
+            h2 {
+                height: 6.5rem;
+                width: 100%;
+                text-align: right;
+                border-bottom: .2rem solid $agro_color-2;
+            }
+        }
+    }
+    .lower {
+        margin-bottom: 3rem;
+        .lower_pic {
+            img {
+                max-width: 100%
+            }
+        }
+        .vision_content {
+            padding: 4rem;
+            min-width: 48.25rem;
+            font-size: 1.75rem;
+            font-family: "Hind Madurai Bold";
+            line-height: 127.1%;
+            letter-spacing: 0.015em;
+        }
+    }
+    @media(max-width: 1200px) {
+        .upper {
+            position: relative;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .title {
+                position: absolute;
+                top: -9rem;
+                left: 50%;
+                transform: translate(-50%);
+                width: 40%;
+                margin: 0;
+                h2 {
+                    height: 6.5rem;
+                    width: 100%;
+                    text-align: center;
+                    border-bottom: .2rem solid $agro_color-2;
+                }
+            }
+        }
+    }
+    @media(max-width: 768px) {
+        .upper {
+            .title {
+                top: -8rem;
+                h2 {
+                    font-size: 4rem;
+                    height: 5.5rem;
+                }
+            }
+        }
+        .lower {
+            margin-bottom: 3rem;
+            .vision_content {
+                padding: 2rem;
+                min-width: 0;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        .upper {
+            .title {
+                top: -6rem;
+                h2 {
+                    font-size: 3rem;
+                    height: 4rem;
+                }
+            }
+        }
+        .lower {
+            margin-bottom: 10rem;
+            .vision_content {
+                padding: 1rem;
+                min-width: 0;
+                font-size: 1rem;
+            }
+        }
+    }
+    @media (max-width: 576px) and (orientation: portrait) {
+        padding-top: 8rem;
+        min-height: 100vh;
+    }
+}
+
+#news {
+    h2 {
+        height: 6.5rem;
+        text-align: center;
+        width: 40vw;
+        min-width: 9.3rem;
+        border-bottom: .2rem solid $agro_color-2;
+        margin-bottom: 4.5rem;
+    }
+    .col_spacing {
+        padding: 3rem;
+        .card {
+            height: 48.75rem;
+            border: 2px solid $agro_color-black;
+            overflow: hidden;
+            position: relative;
+            .tag {
+                text-align: center;
+                width: 50%;
+                background: $agro_color-1;
+                padding: 1rem;
+                z-index: 2;
+                p {
+                    color: $agro_color-white;
+                    font-family: "Alegreya Sans SC";
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    height: 100%;
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+            .card-img-top {
+                height: 100%;
+                background: $agro_color-1;
+                img {
+                    height: 75%;
+                    min-width: 100%;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .card-body {
+                background-color: $agro_color-white;
+                position: absolute;
+                width: 100%;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                height: 25%;
+                z-index: 1;
+            }
+            .card-text {
+                position: absolute;
+                bottom: 10%;
+                font-family: "Open Sans Bold";
+                margin: 1.2rem;
+                font-size: 1.3rem;
+                line-height: 127.1%;
+                text-align: center;
+                letter-spacing: 0.015em;
+                z-index: 1;
+            }
+            .btn {
+                position: absolute;
+                bottom: 1.5rem;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                background-color: $agro_color-gray-2;
+                border-radius: 1rem;
+                color: $agro_color-white;
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: .75rem;
+                letter-spacing: 0.015em;
+                width: 13rem;
+                height: 1.75rem;
+                text-transform: lowercase;
+                z-index: 1;
+            }
+        }
+    }
+    .btn_more {
+        .btn {
+            margin-top: 5.9rem;
+            margin-bottom: 8.25rem;
+            background-color: $agro_color-gray-2;
+            border-radius: 1rem;
+            color: $agro_color-white;
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: .75rem;
+            letter-spacing: 0.015em;
+            width: 13rem;
+            height: 1.75rem;
+            text-transform: lowercase;
+        }
+    }
+    @media (max-width: 1200px) {
+        .col_spacing {
+            .card {
+                background: transparent;
+                .card-text {
+                    bottom: 7%;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        .card_background_image {
+            background: none;
+        }
+    }
+    @media (max-width: 992px) {
+        background: $agro_color-1;
+        padding: 0;
+        max-width: unset;
+        .title {
+            background: $agro_color-white;
+            h2 {
+                height: 7.5vw;
+                width: 10vw;
+                text-align: center;
+                min-width: 9.3rem;
+                border-bottom: .2rem solid $agro_color-2;
+                margin-bottom: 4.5vw;
+                font-size: 5vw;
+            }
+        }
+        .row {
+            padding: 0;
+            .col_spacing {
+                padding: 0;
+                .card_background_image {
+                    height: 100vh!important;
+                    min-height: 20rem;
+                    width: 100%!important;
+                    padding: 10vh 10vw;
+                    background-size: cover!important;
+                    background-position: center!important;
+                    .card {
+                        height: 80vh;
+                        border: .2rem solid $agro_color-white;
+                        .tag {
+                            max-height: 10vh;
+                            min-height: 8vw;
+                            padding: .75rem;
+                            p {
+                                font-size: 5vw;
+                            }
+                        }
+                        .card-body {
+                            background: transparent;
+                        }
+                        .card-text {
+                            color: $agro_color-white;
+                            text-shadow: 1px 1px 1px $agro_color-black;
+                            bottom: 30%;
+                            margin: 0 30% 0 5%;
+                            text-align: start;
+                            letter-spacing: 0.015em;
+                        }
+                        .btn {
+                            bottom: 10%;
+                        }
+                    }
+                }
+            }
+        }
+        .btn_more {
+            background: $agro_color-white;
+            .btn {
+                margin: 3rem;
+            }
+        }
+    }
+}
+
+#technology {
+    background-image: url('../img/technology.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 2.5rem;
+    .technology_content {
+        background: rgba($agro_color-white, 0.87);
+        width: 50%;
+        padding: 3rem;
+        h2 {
+            height: 7vw;
+            text-align: center;
+            font-size: 5vw;
+            width: 80%;
+            min-width: 9.3rem;
+            border-bottom: .2rem solid $agro_color-2;
+            margin-bottom: 2.5rem;
+        }
+        p {
+            font-family: "Hind Madurai";
+            font-size: 1rem;
+            line-height: 168.6%;
+            text-align: center;
+            letter-spacing: 0.055em;
+        }
+    }
+    @media (max-width: 1200px) {
+        .technology_content {
+            padding: 2.5rem;
+            width: 67%;
+            h2 {
+                font-size: 3rem;
+                height: 4.5rem;
+                width: 60%;
+                min-width: 9.3rem;
+                margin-bottom: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 168.6%;
+                letter-spacing: 0.055em;
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        .technology_content {
+            padding: 2.5rem;
+            width: 80%;
+            h2 {
+                font-size: 2rem;
+                height: 3rem;
+                width: 60%;
+                min-width: 9.3rem;
+                margin-bottom: 1.5rem;
+            }
+            p {
+                font-size: .75rem;
+                line-height: 168.6%;
+                letter-spacing: 0.055em;
+            }
+        }
+    }
+    @media(max-width: 768px) {
+        min-height: 45rem;
+        height: 100vh;
+        position: relative;
+        background-position: center bottom;
+        padding: 0;
+        .technology_content {
+            position: absolute;
+            top: 0;
+            background: $agro_color-white;
+            width: 100%;
+            overflow: hidden;
+            min-height: 50vh;
+            max-height: 100%;
+            padding: 1rem 2rem;
+            h2 {
+                height: 2.5rem;
+                width: 12rem;
+                margin-bottom: .75rem;
+                font-size: 1.5rem;
+                line-height: 127.1%;
+                letter-spacing: 0.015em;
+            }
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                line-height: 159.6%;
+                letter-spacing: 0.025em;
+            }
+        }
+    }
+    @media(max-width: 768px) and (orientation:landscape) {
+        .technology_content {
+            background: rgba($agro_color-white, 0.87);
+        }
+    }
+    @media(max-width: 575px) {
+        .technology_content {
+            padding: 1rem 1rem;
+            p {
+                text-align: justify;
+                font-size: .85rem;
+            }
+        }
+    }
+}
+
+#contact {
+    padding: 8.7rem 0 13.8rem 0;
+    .left_image {
+        position: relative;
+        margin: 2.5rem 0;
+        img {
+            position: absolute;
+            left: 0;
+            width: 57vw;
+            max-width: 48.25rem;
+        }
+    }
+    .contact_content {
+        h2 {
+            height: 7rem;
+            width: 28rem;
+            margin-bottom: 3rem;
+            border-bottom: .2rem solid $agro_color-2;
+            white-space: nowrap;
+        }
+        .col-1 {
+            padding: 0
+        }
+        .svg-container {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+            vertical-align: middle;
+            overflow: hidden;
+            .svg-content {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @media (min-width: 992px) {
+                    path {
+                        fill: $agro_color-gray-1;
+                    }
+                }
+            }
+        }
+        p {
+            font-family: "Hind Madurai";
+            font-weight: 300;
+            font-size: 2.25rem;
+            line-height: 126.6%;
+            letter-spacing: 0.015em;
+            margin-bottom: 3rem;
+            padding-left: .7rem;
+        }
+        form {
+            width: 28rem;
+            .form-group {
+                label {
+                    font-family: "Open Sans Bold";
+                    font-size: .75rem;
+                    line-height: 127.1%;
+                    letter-spacing: 0.015em;
+                    text-transform: uppercase;
+                    color: $agro_color-gray-1;
+                }
+                .form-control {
+                    margin-bottom: 3rem;
+                    &[name="name"],
+                    &[name="email"] {
+                        border: none;
+                        border-radius: 0;
+                        border-bottom: 1px solid $agro_color-gray-1;
+                    }
+                }
+                textarea {
+                    height: 8rem;
+                    resize: none;
+                    margin-top: 1rem;
+                    border: 1px solid $agro_color-gray-1;
+                    box-sizing: border-box;
+                    border-radius: 12px;
+                }
+            }
+            button {
+                font-family: "Open Sans Bold";
+                color: $agro_color-white;
+                background: $agro_color-gray-2;
+                border-radius: .375rem;
+                width: 50%;
+                height: 2.6rem;
+                font-weight: 100;
+                font-size: 2.25rem;
+                line-height: .75rem;
+                letter-spacing: 0.015em;
+                text-transform: lowercase;
+            }
+        }
+    }
+    .social {
+        padding: 10rem 0 0 7rem;
+        a {
+            margin-bottom: 6rem;
+            img {
+                height: 2rem;
+            }
+        }
+    }
+    @media (max-width:1200px) {
+        .contact_content {
+            h2 {
+                height: 5rem;
+                font-size: 3.5rem;
+                width: 22rem;
+                margin-bottom: 1.5rem;
+            }
+            p {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            form {
+                width: 22rem;
+                .form-group {
+                    .form-control {
+                        margin-bottom: 1.5rem;
+                    }
+                    textarea {
+                        margin-top: .5rem;
+                    }
+                }
+                button {
+                    height: 2rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    @media (max-width:992px) {
+        margin-top: 2.8rem;
+        padding: 3rem;
+        background-color: $agro_color-1;
+        color: $agro_color-white;
+        .contact_content {
+            h2 {
+                color: $agro_color-3;
+                height: 7rem;
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+            .col-1 {
+                padding-left: 1rem;
+            }
+            p {
+                font-size: 1.75rem;
+                line-height: 126.6%;
+                margin-bottom: 3rem;
+            }
+            form {
+                width: 70%;
+                .form-group {
+                    label {
+                        font-size: 1rem;
+                        color: $agro_color-white;
+                    }
+                    .form-control {
+                        background: transparent;
+                        color: $agro_color-white;
+                        &[name="name"],
+                        &[name="email"] {
+                            border-bottom: .2rem solid $agro_color-white;
+                        }
+                    }
+                    textarea {
+                        border: .2rem solid $agro_color-white;
+                    }
+                }
+                button {
+                    height: 2.6rem;
+                    font-size: 2.25rem;
+                }
+            }
+        }
+    }
+    @media (max-width:992px) and (orientation:portrait) {
+        min-height: 100vh;
+        padding: 2vh;
+        .contact_content {
+            h2 {
+                height: 8vh;
+                font-size: 5vh;
+            }
+            .col-1 {
+                padding-left: 2.5vh;
+            }
+            p {
+                margin-bottom: 4vh;
+                font-size: 2.5vh;
+            }
+            form {
+                width: 70%;
+                .form-group {
+                    label {
+                        font-size: 2vh;
+                        color: $agro_color-white;
+                    }
+                    .form-control {
+                        margin-bottom: 0;
+                    }
+                    textarea {
+                        height: 15vh;
+                        border: .2rem solid $agro_color-white;
+                    }
+                }
+                button {
+                    height: 3.5vh;
+                    font-size: 2.5vh;
+                }
+            }
+        }
+        .social {
+            padding: 3.5rem 0 0 3rem;
+            a {
+                margin-bottom: 3rem;
+                img {
+                    height: 2rem;
+                }
+            }
+        }
+    }
+    @media (max-width:576px) {
+        min-height: 100vh;
+        padding: 2vh;
+        .contact_content {
+            h2 {
+                height: 8vh;
+                font-size: 5vh;
+            }
+            .col-1 {
+                padding-left: 1.5vh;
+            }
+            p {
+                margin-bottom: 4vh;
+                padding-left: 0;
+                font-size: 2.5vh;
+            }
+            form {
+                width: 80%;
+                .form-group {
+                    label {
+                        font-size: 2vh;
+                        color: $agro_color-white;
+                    }
+                    .form-control {
+                        margin-bottom: 0;
+                    }
+                    textarea {
+                        height: 15vh;
+                        border: .2rem solid $agro_color-white;
+                    }
+                }
+                button {
+                    height: 3.5vh;
+                    min-height: 1.5rem;
+                    font-size: 2.5vh;
+                }
+            }
+        }
+        .social {
+            padding: 3.5rem 0 0 1rem;
+            a {
+                margin-bottom: 3rem;
+                img {
+                    height: 2rem;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    @media(max-width: 992px) {
+        background-color: $agro_color-white;
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $agro_color-1;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $agro_color-1;
+                    }
+                }
+            }
+        }
+        path {
+            fill: $agro_color-1!important;
+        }
+    }
+}

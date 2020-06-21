@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<div class="container min-vh-100">
+  {% bootstrap_messages %}
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg4">
+      <p class="sticky taped2" style="width: 250px;">
+        <strong>Welcome {{user.first_name}}!</strong><br>
+        <br>
+        You are authenticated to the site.<br />
+        <br>
+        {% if user.is_staff %}
+        If you want to create a new article,<br/>
+        click on the button "Write Article"<br/>
+        <br>
+        The link between article and<br/>
+        its creator is not implemented yet,<br>
+        so please don't forget to insert<br/>
+        the author name correctly!<br/>
+        <br>
+        {% else %}
+        Please contact an administrator<br/>
+        to set your account as Staff.<br/>
+        <br/>
+        {% endif %}
+        Feel free to edit your information,<br/>
+        to do that click on Edit.
+      </p>
+    </div>
+
+    {% if user.is_staff %}
+    <div class="col-sm-6 col-md-4 col-lg-4">
+      <h3>Agrevo News</h3>
+      <a href="{% url 'blog:post_create' %}"><button class="btn btn-success" type="button" name="button">Write Article</button></a>
+    </div>
+    {% endif %}
+
+    <div class="col-sm-6 col-md-4 col-lg-4">
+      <h3>Profile</h3>
+      <ul class="list-unstyled">
+        <li>First name: <strong>{{user.first_name}}</strong></li>
+        <li>Last name: <strong>{{user.last_name}}</strong></li>
+        <li>Display name: <strong>{{user.username}}</strong></li>
+        <li>Email: <strong>{{user.email}}</strong></li>
+        <li>{% if email_verified %}Verified{% else %}Unverified{% endif %}</li>
+      </ul>
+      <a href="{% url 'edit_profile' %}"><p>Edit</p></a>
+      <a href="{% url 'account_change_password' %}"><p>Change Password</p></a>
+      <a href="{% url 'account_email' %}"><p>Email</p></a>
+      {% if user.is_superuser %}<a href="{% url 'admin:index' %}"><p>Admin</p></a>{% endif %}
+      {% if user.is_superuser %}<a href="https://www.pythonanywhere.com/user/kgen/"><p>Server</p></a>{% endif %}
+      <a href="{% url 'account_logout' %}"><p>Logout</p></a>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Message Sent{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{% static '/css/message_sent.css' %}">  {% endblock %}
+{% block main_content %}
+  <section class="message_sent">
+      <h2>メッセージを送信しました。</h2>
+      <h1>Thank you.</h1>
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'index' %}">
+          <div class="return_container" style="background: url({% static 'img/Ellipse_2.svg' %}) no-repeat">
+            トップページに戻る
+          </div>
+        </a>
+      </div>
+  </section>
+{% endblock %}

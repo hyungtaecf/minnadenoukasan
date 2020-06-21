@@ -1,0 +1,354 @@
+@font-face {
+  font-family: "Abhaya Libre";
+  src: url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff2") format("woff2"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff") format("woff"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Abhaya Libre Bold";
+  src: url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff2") format("woff2"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff") format("woff"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Alegreya Sans SC";
+  src: url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2") format("woff2"), url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff") format("woff"), url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Allerta Stencil";
+  src: url("../fonts/allerta-stencil-v10-latin-regular.woff2") format("woff2"), url("../fonts/allerta-stencil-v10-latin-regular.woff") format("woff"), url("../fonts/allerta-stencil-v10-latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Hind Madurai";
+  src: url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff2") format("woff2"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff") format("woff"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Hind Madurai Bold";
+  src: url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff2") format("woff2"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff") format("woff"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-all-regular.woff2") format("woff2"), url("../fonts/opensans-all-regular.woff") format("woff"), url("../fonts/opensans-all-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/opensans-all-700.woff2") format("woff2"), url("../fonts/opensans-all-700.woff") format("woff"), url("../fonts/opensans-all-700.ttf") format("ttf");
+}
+
+h2 {
+  font-family: "Open Sans Bold";
+  font-size: 4.5rem;
+}
+
+.post_header {
+  min-height: calc(50vh - 13.7rem);
+}
+
+.post_header .section_title {
+  margin: 1rem;
+}
+
+.post_header .section_title h2 {
+  font-size: 1.2rem;
+  height: 1.8rem;
+  text-align: center;
+  width: 6.5rem;
+  border-bottom: 0.2rem solid #1f6c34;
+  margin-bottom: 2rem;
+}
+
+.post_header .post_info {
+  margin-bottom: 3rem;
+}
+
+.post_header .post_info h1 {
+  font-family: 'Open Sans Bold';
+  font-size: 1.2rem;
+  line-height: 127.1%;
+  letter-spacing: 0.015em;
+  margin-bottom: 1rem;
+}
+
+.post_header .post_info .post_info_sub {
+  margin-bottom: 1rem;
+}
+
+.post_header .post_info .post_info_sub img {
+  width: 1rem;
+}
+
+.post_header .post_info .post_info_sub p {
+  margin: 0 .75rem;
+  font-family: "Open Sans";
+  font-size: .75rem;
+  line-height: 127.1%;
+  letter-spacing: 0.015em;
+}
+
+@media (min-width: 576px) {
+  .post_header {
+    padding: 0 2rem;
+  }
+  .post_header .section_title {
+    margin: 1.5rem;
+  }
+  .post_header .section_title h2 {
+    font-size: 2.25rem;
+    height: 3rem;
+    width: 9rem;
+    margin-bottom: 1rem;
+  }
+  .post_header .post_info {
+    margin-bottom: 1.5rem;
+  }
+  .post_header .post_info h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .post_header .post_info .post_info_sub {
+    margin-bottom: .5rem;
+  }
+  .post_header .post_info .post_info_sub p {
+    margin: 0 .75rem;
+    font-size: .9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .post_header {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .post_header {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .post_header {
+    padding: 0 4rem;
+    min-height: calc(100vh - 13.7rem);
+  }
+  .post_header .section_title {
+    margin: 3rem;
+  }
+  .post_header .section_title h2 {
+    font-size: 4.5rem;
+    height: 6rem;
+    width: 18rem;
+    margin-bottom: 2rem;
+  }
+  .post_header .post_info {
+    margin-bottom: 3rem;
+  }
+  .post_header .post_info h1 {
+    font-size: 3.2vw;
+    margin-bottom: 2rem;
+  }
+  .post_header .post_info .post_info_sub {
+    margin-bottom: 1rem;
+  }
+  .post_header .post_info .post_info_sub img {
+    width: 1.5rem;
+  }
+  .post_header .post_info .post_info_sub p {
+    margin: 0 .75rem;
+    font-size: 1.125rem;
+  }
+}
+
+.blog_post {
+  background: #FFF;
+  margin-bottom: 5rem;
+}
+
+.blog_post .img_container {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 4vw 0;
+}
+
+.blog_post .img_container img {
+  position: absolute;
+  top: 0;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 50vh;
+}
+
+.blog_post p {
+  text-align: justify;
+  font-size: .9rem;
+  margin-bottom: .8vw;
+}
+
+@media (min-width: 576px) {
+  .blog_post {
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog_post {
+    padding: 0 2.5rem 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog_post {
+    padding: 0 3rem 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog_post {
+    padding: 0 4rem 4rem;
+  }
+  .blog_post .img_container {
+    height: 100vh;
+  }
+  .blog_post .img_container img {
+    height: 100vh;
+  }
+  .blog_post p {
+    text-align: justify;
+    font-size: 1.3rem;
+  }
+}
+
+.related_posts {
+  margin-bottom: 3.5rem;
+  padding: 0 1vw;
+}
+
+.related_posts h1 {
+  font-family: 'Open Sans Bold';
+  font-size: 1.2rem;
+  line-height: 127.1%;
+  letter-spacing: 0.015em;
+  margin-bottom: 1rem;
+}
+
+.related_posts .related_story_card {
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  height: 14rem;
+  margin-bottom: 2rem;
+}
+
+.related_posts .related_story_card .post_info {
+  padding: .5rem;
+  width: calc(100vw - 40vw - 2vw);
+}
+
+.related_posts .related_story_card .post_info h1 {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 127.1%;
+  letter-spacing: 0.015em;
+  margin-bottom: .5rem;
+}
+
+.related_posts .related_story_card .post_info .post_info_sub {
+  margin-bottom: .5rem;
+}
+
+.related_posts .related_story_card .post_info .post_info_sub img {
+  width: .8rem;
+}
+
+.related_posts .related_story_card .post_info .post_info_sub p {
+  margin: 0;
+  font-family: "Open Sans";
+  font-size: .7rem;
+  line-height: 127.1%;
+  letter-spacing: 0.015em;
+}
+
+.related_posts .related_story_card .post_info .btn {
+  background-color: #C4C4C4;
+  border-radius: 1rem;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: .9rem;
+  line-height: .3rem;
+  letter-spacing: 0.015em;
+  width: 6rem;
+  height: 1.2rem;
+  text-transform: lowercase;
+}
+
+.related_posts .related_story_card .card_background_image {
+  height: 100% !important;
+  width: 40rem !important;
+  max-width: 40vw !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+@media (min-width: 576px) {
+  .related_posts {
+    padding: 0 calc(10vw - 1rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .related_posts {
+    padding: 0 10vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .related_posts {
+    margin-bottom: 7rem;
+    padding: 0 16vw;
+  }
+  .related_posts h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  .related_posts .related_story_card {
+    height: 20rem;
+  }
+  .related_posts .related_story_card .post_info {
+    padding: 2rem;
+    width: calc(100vw - 27rem - 32vw);
+  }
+  .related_posts .related_story_card .post_info h1 {
+    font-size: 1.7vw;
+  }
+  .related_posts .related_story_card .post_info .post_info_sub {
+    margin-bottom: 1rem;
+  }
+  .related_posts .related_story_card .post_info .post_info_sub p {
+    margin: 0 .75rem;
+    font-size: 1.125rem;
+  }
+  .related_posts .related_story_card .post_info .btn {
+    font-size: 1.5rem;
+    line-height: .75rem;
+    width: 13rem;
+    height: 1.75rem;
+    margin: 2rem 0;
+  }
+  .related_posts .related_story_card .card_background_image {
+    height: 100% !important;
+    width: 27rem !important;
+    max-width: 40vw !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+/*# sourceMappingURL=post_detail.css.map */

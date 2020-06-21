@@ -1,0 +1,122 @@
+@import './variables';
+.related_posts {
+    margin-bottom: 3.5rem;
+    padding: 0 1vw;
+    h1 {
+        font-family: 'Open Sans Bold';
+        font-size: 1.2rem;
+        line-height: 127.1%;
+        letter-spacing: 0.015em;
+        margin-bottom: 1rem;
+    }
+    .related_story_card {
+        border: 1px solid rgba($agro_color-black, 0.54);
+        box-sizing: border-box;
+        overflow: hidden;
+        height: 14rem;
+        margin-bottom: 3.5vw;
+        .post_info {
+            padding: .5rem;
+            width: calc(100vw - 40vw - 2vw); //full screen width minus image minus card padding
+            .outer {
+                height: 4.8rem;
+                margin-bottom: 1.5vw;
+                h1 {
+                    font-family: 'Open Sans';
+                    font-weight: 600;
+                    font-size: 1rem;
+                    line-height: 127.1%;
+                    letter-spacing: 0.015em;
+                    margin: 0;
+                }
+            }
+            .post_info_sub {
+                img {
+                    width: .8rem;
+                }
+                p {
+                    margin: 1.3vh;
+                    font-family: "Open Sans";
+                    font-size: .7rem;
+                    line-height: 127.1%;
+                    letter-spacing: 0.015em;
+                }
+            }
+            .btn {
+                background-color: $agro_color-gray-2;
+                border-radius: 1rem;
+                color: $agro_color-white;
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: .9rem;
+                line-height: .3rem;
+                letter-spacing: 0.015em;
+                width: 6rem;
+                height: 1.2rem;
+                text-transform: lowercase;
+            }
+        }
+        .card_background_image {
+            height: 100%!important;
+            width: 40rem!important;
+            max-width: 40vw!important;
+            background-size: cover!important;
+            background-position: center!important;
+        }
+    }
+    @media (min-width: 576px) {
+        padding: 0 calc(10vw - 1rem);
+        .outer {
+            height: 7rem;
+        }
+        .post_info_sub {
+            margin-bottom: .5rem;
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 0 10vw;
+    }
+    @media (min-width: 992px) {}
+    @media (min-width: 1200px) {
+        margin-bottom: 7rem;
+        padding: 0 16vw;
+        h1.section_title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .related_story_card {
+            height: 20rem;
+            .post_info {
+                padding: 2rem;
+                width: calc(100vw - 27rem - 32vw); //full screen width minus image minus card padding
+                .outer {
+                    max-height: 15rem;
+                    h1 {
+                        font-size: 1.7rem;
+                    }
+                }
+                .post_info_sub {
+                    margin-bottom: 1rem;
+                    p {
+                        margin: 0 .75rem;
+                        font-size: 1.125rem;
+                    }
+                }
+                .btn {
+                    font-size: 1.5rem;
+                    line-height: .75rem;
+                    width: 13rem;
+                    height: 1.75rem;
+                    margin: 2rem 0;
+                }
+            }
+            .card_background_image {
+                height: 100%!important;
+                width: 27rem!important;
+                max-width: 40vw!important;
+                background-size: cover!important;
+                background-position: center!important;
+            }
+        }
+    }
+}

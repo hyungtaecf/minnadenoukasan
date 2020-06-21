@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "Abhaya Libre";
+  src: url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff2") format("woff2"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.woff") format("woff"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Abhaya Libre Bold";
+  src: url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff2") format("woff2"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.woff") format("woff"), url("../fonts/abhaya-libre-v5-sinhala_latin-ext_latin-800.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Alegreya Sans SC";
+  src: url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2") format("woff2"), url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff") format("woff"), url("../fonts/alegreya-sans-sc-v9-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Allerta Stencil";
+  src: url("../fonts/allerta-stencil-v10-latin-regular.woff2") format("woff2"), url("../fonts/allerta-stencil-v10-latin-regular.woff") format("woff"), url("../fonts/allerta-stencil-v10-latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Hind Madurai";
+  src: url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff2") format("woff2"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.woff") format("woff"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Hind Madurai Bold";
+  src: url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff2") format("woff2"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.woff") format("woff"), url("../fonts/hind-madurai-v5-tamil_latin-ext_latin-600.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-all-regular.woff2") format("woff2"), url("../fonts/opensans-all-regular.woff") format("woff"), url("../fonts/opensans-all-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/opensans-all-700.woff2") format("woff2"), url("../fonts/opensans-all-700.woff") format("woff"), url("../fonts/opensans-all-700.ttf") format("ttf");
+}
+
+* {
+  letter-spacing: 0.015em;
+  line-height: 127.1%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #FFF;
+  font-family: "Hind Madurai";
+  color: #000;
+}
+
+header {
+  overflow: visible;
+}
+
+header .navbar {
+  min-height: 13.7rem;
+  color: #000;
+}
+
+header .navbar.bg_agro-light {
+  background: #FFF;
+}
+
+header .navbar .navbar-brand {
+  margin: 0 2.75rem;
+}
+
+header .navbar .navbar-brand img {
+  max-width: 6.1rem;
+}
+
+header .navbar .nav-item {
+  margin: 0 2vw;
+  padding: 0;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+header .navbar .nav-item .nav-link {
+  font-family: "Alegreya Sans SC";
+  font-size: 1.5rem;
+  color: #000;
+}
+
+header .navbar .nav-item .nav-link:hover, header .navbar .nav-item .nav-link:active, header .navbar .nav-item .nav-link:focus {
+  color: #1F6633;
+}
+
+@media (max-width: 1300px) {
+  header .navbar .nav-item {
+    margin: 0 1vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  header .navbar .nav-item {
+    margin: 0 2rem;
+  }
+  header .navbar .nav-item:last-child {
+    margin-right: 5rem;
+  }
+}
+
+header .navbar .form-inline {
+  width: 13rem;
+}
+
+header .navbar .form-inline input {
+  border: 1px solid #000;
+  border-radius: 1.87rem;
+  padding: 0 2.5rem 0 .8rem;
+  height: 1.75rem;
+  max-width: 12rem;
+}
+
+header .navbar .form-inline button {
+  right: .73rem;
+}
+
+@media (max-width: 992px) {
+  header .navbar {
+    min-height: 4rem;
+  }
+  header .navbar .navbar-brand {
+    margin: 0;
+  }
+  header .navbar .navbar-brand img {
+    max-width: 3rem;
+  }
+  header .navbar .nav-item {
+    margin: 0;
+  }
+}
+
+footer {
+  height: 19.75vw;
+  background-color: #1F6633;
+}
+
+footer .navbar {
+  height: 13.7vw;
+}
+
+footer .navbar .navbar-nav {
+  width: auto;
+}
+
+footer .navbar .nav-item {
+  margin: 0 2vw;
+  padding: 0;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+footer .navbar .nav-item .nav-link {
+  font-family: "Alegreya Sans SC";
+  font-size: 1.5vw;
+  color: #FFF;
+}
+
+footer .navbar .nav-item .nav-link:hover, footer .navbar .nav-item .nav-link:active, footer .navbar .nav-item .nav-link:focus {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+footer .svg-container {
+  display: inline-block;
+  position: relative;
+  width: 5vw;
+  padding-bottom: 100%;
+  vertical-align: middle;
+}
+
+footer .svg-container .svg-content {
+  display: inline-block;
+  position: absolute;
+  top: -2vw;
+  left: 0;
+}
+
+footer .svg-container .svg-content path {
+  fill: #FFF;
+}
+
+@media (max-width: 992px) {
+  footer .navbar-nav {
+    width: 100% !important;
+  }
+  footer .navbar-nav .nav-item {
+    margin: 0 .5vw;
+    padding: 0;
+    letter-spacing: 0.015em;
+  }
+  footer .navbar-nav .nav-item .nav-link {
+    font-size: 3vw;
+    white-space: nowrap;
+  }
+  footer .navbar-nav .nav-item .nav-link:hover, footer .navbar-nav .nav-item .nav-link:active, footer .navbar-nav .nav-item .nav-link:focus {
+    text-decoration: underline;
+  }
+}
+/*# sourceMappingURL=master.css.map */

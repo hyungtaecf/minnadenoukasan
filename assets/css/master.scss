@@ -1,0 +1,151 @@
+@import './variables';
+@import './fonts';
+* {
+    letter-spacing: 0.015em;
+    line-height: 127.1%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background: $agro_color-white;
+    font-family: "Hind Madurai";
+    color: $agro_color-black;
+}
+
+header {
+    overflow: visible;
+    .navbar {
+        min-height: 13.7rem;
+        color: $agro_color-black;
+        &.bg_agro-light {
+            background: $agro_color-white;
+        }
+        .navbar-brand {
+            margin: 0 2.75rem;
+            img {
+                max-width: 6.1rem;
+            }
+        }
+        .nav-item {
+            margin: 0 2vw;
+            padding: 0;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            .nav-link {
+                font-family: "Alegreya Sans SC";
+                font-size: 1.5rem;
+                color: $agro_color-black;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $agro_color-1;
+                }
+            }
+            @media (max-width: 1300px) {
+                margin: 0 1vw;
+            }
+            @media (max-width: 1200px) {
+                margin: 0 2rem;
+                &:last-child {
+                    margin-right: 5rem;
+                }
+            }
+        }
+        .form-inline {
+            width: 13rem;
+            input {
+                border: 1px solid $agro_color-black;
+                border-radius: 1.87rem;
+                padding: 0 2.5rem 0 .8rem;
+                height: 1.75rem;
+                max-width: 12rem;
+            }
+            button {
+                right: .73rem;
+            }
+        }
+        @media (max-width: 992px) {
+            min-height: 4rem;
+            .navbar-brand {
+                margin: 0;
+                img {
+                    max-width: 3rem;
+                }
+            }
+            .nav-item {
+                margin: 0;
+            }
+        }
+    }
+}
+
+footer {
+    height: 19.75vw;
+    background-color: $agro_color-1;
+    .navbar {
+        height: 13.7vw;
+        .navbar-nav {
+            width: auto;
+        }
+        .nav-item {
+            margin: 0 2vw;
+            padding: 0;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            .nav-link {
+                font-family: "Alegreya Sans SC";
+                font-size: 1.5vw;
+                color: $agro_color-white;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $agro_color-white;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 5vw;
+        padding-bottom: 100%;
+        vertical-align: middle;
+        // overflow: hidden;
+        .svg-content {
+            display: inline-block;
+            position: absolute;
+            top: -2vw;
+            left: 0;
+            path {
+                fill: $agro_color-white;
+            }
+        }
+    }
+    @media(max-width:992px) {
+        .navbar-nav {
+            width: 100%!important;
+            .nav-item {
+                margin: 0 .5vw;
+                padding: 0;
+                letter-spacing: 0.015em;
+                .nav-link {
+                    font-size: 3vw;
+                    white-space: nowrap;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
