@@ -45,7 +45,7 @@ def home(request):
             email = EmailMessage(
                 "New Q&A form email",
                 content,
-                "Agrevo Life",
+                "minnadenoukasan",
                 ['info@agrevo.life'],
                 headers = { 'Reply To': email}
             )

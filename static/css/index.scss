@@ -1,70 +1,56 @@
-@import './variables';
-@import './fonts';
+@import "./variables";
+@import "./fonts";
 h2 {
     font-family: "Open Sans Bold";
     font-size: 4.5rem;
 }
 
 #launching {
-    height: 100vh;
+    --launching-height: 80vmin;
+    --font-size-factor: 7vmax;
+    height: var(--launching-height);
     background: $agro_color-1;
-    // position: relative;
     .launching_content {
         color: $agro_color-white;
         text-align: center;
-        // padding: 0 2.75rem;
         padding: 0 3vw;
-        min-width: 55vw;
-        h1 {
-            font-family: "Allerta Stencil";
-            font-size: 10.5vw;
+        min-width: 60vw;
+        h1,
+        h2 {
             max-width: 60%;
             text-align: start;
+        }
+        h1 {
+            font-family: "Allerta Stencil";
+            font-size: var(--font-size-factor);
             text-transform: uppercase;
+            white-space: pre-line;
         }
         h2 {
             font-family: "Open Sans Bold";
             width: 100%;
-            font-size: 5vw;
-            text-align: start;
+            font-size: calc(var(--font-size-factor) / 2);
             font-weight: 700;
             text-transform: lowercase;
         }
     }
-    .img_container {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        max-width: 45vw;
-        overflow: hidden;
-        img {
-            position: absolute;
-            right: 0;
-            height: 100vh;
-        }
-    }
-    @media (max-width: 1350px) {
-        .launching_content h1 {
-            font-size: 9.5vw;
-        }
-    }
-    @media (max-width: 1200px) {
-        .launching_content h1 {
-            font-size: 9vw;
-        }
+    img {
+        object-fit: cover;
+        right: 0;
+        height: var(--launching-height);
+        max-width: 40vw;
     }
     @media (max-width: 992px) {
-        height: 50vh;
+        --launching-height: 60vmin;
+        --font-size-factor: 4.25vmax;
         .launching_content {
-            // max-width: 50vw;
-            h1 {
-                font-size: 10vw;
+            align-items: stretch !important;
+            h1,
+            h2 {
+                width: 100%;
             }
-        }
-        .img_container {
-            height: 50vh;
-            img {
-                height: 100%;
+            h2 {
+                font-size: calc(var(--font-size-factor) / 1.5);
             }
         }
     }
@@ -74,7 +60,7 @@ h2 {
     height: 75vh;
     .welcome_content {
         display: flex;
-        max-height: 100%;
+        min-height: 100%;
         align-items: center;
         justify-content: center;
         h2 {
@@ -82,18 +68,17 @@ h2 {
             font-size: 4.5rem;
             width: 24.7rem;
             text-align: center;
-            border-bottom: .2rem solid $agro_color-2;
+            border-bottom: 0.2rem solid $agro_color-2;
         }
         p {
             padding: 3.3rem;
             font-family: "Hind Madurai";
             font-size: 2.25rem;
-            width: 60vw;
             text-align: center;
+            font-weight: 900;
         }
     }
     @media (max-width: 992px) {
-        min-height: 50vh;
         .welcome_content {
             h2 {
                 font-size: 3.5rem;
@@ -107,43 +92,46 @@ h2 {
         }
     }
     @media (max-width: 768px) {
+        height: 33vh;
         .welcome_content {
             h2 {
-                font-size: 2.5rem;
-                width: 13rem;
+                font-size: 3.5vmax;
+                width: 17vmax;
             }
             p {
-                padding: 1.5rem;
-                font-size: 1.5rem;
-                width: 80vw;
+                padding: 2vmax;
+                font-size: 1.75vmax;
+                // width: 80vw;
             }
         }
     }
 }
 
 #about_us {
-    min-height: 65.1rem;
+    min-height: 100%;
     overflow: hidden;
     position: relative;
+    padding: 0 10vmax;
     .about_us-left {
         .background_image {
-            height: 62.6rem;
+            height: 55vmax;
             margin-top: 2.5rem;
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
-            background-size: 100% auto;
         }
     }
     .about_us-right {
-        background-repeat: no-repeat!important;
-        background-size: cover!important;
-        background-position: center!important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
         .upper {
             padding: 0 1.5rem;
             h2 {
-                height: 8.5rem;
+                height: 5.5rem;
                 width: 24rem;
                 margin-bottom: 2.3rem;
-                border-bottom: .2rem solid $agro_color-2;
+                border-bottom: 0.2rem solid $agro_color-2;
             }
             p,
             li {
@@ -153,10 +141,10 @@ h2 {
                 position: relative;
             }
             li::before {
-                content: '・';
+                content: "・";
                 position: absolute;
                 left: -2rem;
-                top: .2rem;
+                top: 0.2rem;
                 font-size: 2rem;
             }
         }
@@ -164,14 +152,14 @@ h2 {
             img {
                 position: absolute;
                 bottom: 0;
-                height: 30vw;
+                height: 23vmax;
                 max-width: 90%;
             }
         }
-        @media(min-width: 992px) {
+        @media (min-width: 992px) {
             background-image: none !important;
         }
-        @media(max-width: 992px) {
+        @media (max-width: 992px) {
             display: flex;
             justify-content: center;
             .upper {
@@ -182,7 +170,7 @@ h2 {
                     height: 6.5rem;
                     width: 60%;
                     white-space: nowrap;
-                    border-bottom: .2rem solid $agro_color-2;
+                    border-bottom: 0.2rem solid $agro_color-2;
                 }
             }
         }
@@ -195,7 +183,7 @@ h2 {
                     height: 3rem;
                     width: 50%;
                     margin-bottom: 2rem;
-                    border-bottom: .2rem solid $agro_color-2;
+                    border-bottom: 0.2rem solid $agro_color-2;
                 }
                 p,
                 li {
@@ -210,14 +198,14 @@ h2 {
         }
         @media (max-width: 576px) {
             .upper {
-                margin: auto 1.5rem;
-                padding: 5vw;
+                margin: 10vmax 1.5vmax;
+                padding: 2vmax 5vmax;
                 h2 {
-                    font-size: 5vw;
-                    height: 8vw;
-                    width: 50%;
+                    font-size: 4vmax;
+                    height: 5.5vmax;
+                    width: 60%;
                     margin-bottom: 1.5rem;
-                    border-bottom: .6vw solid $agro_color-2;
+                    border-bottom: 0.4vmax solid $agro_color-2;
                 }
                 p,
                 li {
@@ -230,33 +218,39 @@ h2 {
                 }
                 li::before {
                     left: -1.5rem;
-                    top: .15rem;
+                    top: 0.15rem;
                     font-size: 1.5rem;
                 }
             }
         }
     }
-    @media(max-width: 768px) {
-        min-height: 100vh;
+    @media (max-width: 768px) {
+        padding: 0;
     }
 }
 
 #vision {
-    padding-top: 13.3rem;
+    padding: 13.3rem 10vmax 0;
     .upper {
-        img {
-            width: 48.25rem;
-            height: 30.5rem;
+        .upper_pic {
+            display: flex;
+            flex-direction: column-reverse;
+            img {
+                width: 100%;
+                min-width: 45vw;
+                height: 90%;
+                object-fit: cover;
+            }
         }
         .title {
+            margin-top: 2vmax;
             width: 100%;
             margin-left: 2rem;
-            margin-right: 8.6rem;
             h2 {
                 height: 6.5rem;
                 width: 100%;
                 text-align: right;
-                border-bottom: .2rem solid $agro_color-2;
+                border-bottom: 0.2rem solid $agro_color-2;
             }
         }
     }
@@ -264,19 +258,19 @@ h2 {
         margin-bottom: 3rem;
         .lower_pic {
             img {
-                max-width: 100%
+                width: 100%;
             }
         }
         .vision_content {
             padding: 4rem;
-            min-width: 48.25rem;
-            font-size: 1.75rem;
+            min-width: 45vw;
+            font-size: 1.25vmax;
             font-family: "Hind Madurai Bold";
             line-height: 127.1%;
             letter-spacing: 0.015em;
         }
     }
-    @media(max-width: 1200px) {
+    @media (max-width: 1200px) {
         .upper {
             position: relative;
             img {
@@ -294,12 +288,12 @@ h2 {
                     height: 6.5rem;
                     width: 100%;
                     text-align: center;
-                    border-bottom: .2rem solid $agro_color-2;
+                    border-bottom: 0.2rem solid $agro_color-2;
                 }
             }
         }
     }
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
         .upper {
             .title {
                 top: -8rem;
@@ -319,17 +313,23 @@ h2 {
         }
     }
     @media (max-width: 576px) {
+        padding: 5.5rem 0 0;
         .upper {
             .title {
-                top: -6rem;
+                top: 5vmax;
                 h2 {
-                    font-size: 3rem;
-                    height: 4rem;
+                    font-size: 3.25vmax;
+                    height: 4.75vmax;
+                }
+            }
+            .upper_pic {
+                img {
+                    height: 65%;
                 }
             }
         }
         .lower {
-            margin-bottom: 10rem;
+            margin-bottom: 3rem;
             .vision_content {
                 padding: 1rem;
                 min-width: 0;
@@ -337,299 +337,146 @@ h2 {
             }
         }
     }
-    @media (max-width: 576px) and (orientation: portrait) {
-        padding-top: 8rem;
-        min-height: 100vh;
-    }
 }
 
 #news {
+    padding: 5vmax 20vmax 0;
+    margin: 0;
+    width: 100%;
     h2 {
-        height: 6.5rem;
+        font-size: 4.5vmax;
+        height: 6.5vmax;
         text-align: center;
-        width: 40vw;
-        min-width: 9.3rem;
-        border-bottom: .2rem solid $agro_color-2;
-        margin-bottom: 4.5rem;
+        width: 40vmax;
+        border-bottom: 0.25vmax solid $agro_color-2;
+        margin-bottom: 4.5vmax;
     }
-    .col_spacing {
-        padding: 3rem;
-        .card {
-            height: 48.75rem;
-            border: 2px solid $agro_color-black;
-            overflow: hidden;
-            position: relative;
-            .tag {
-                text-align: center;
-                width: 50%;
-                background: $agro_color-1;
-                padding: 1rem;
-                z-index: 2;
-                p {
-                    color: $agro_color-white;
-                    font-family: "Alegreya Sans SC";
-                    font-weight: bold;
-                    font-size: 1.5rem;
-                    text-transform: uppercase;
-                    height: 100%;
-                    width: 100%;
-                    margin: 0;
-                }
-            }
-            .card-img-top {
-                height: 100%;
-                background: $agro_color-1;
-                img {
-                    height: 75%;
-                    min-width: 100%;
-                    margin-left: 50%;
-                    transform: translateX(-50%);
-                }
-            }
-            .card-body {
-                background-color: $agro_color-white;
-                position: absolute;
-                width: 100%;
-                margin-left: 50%;
-                transform: translateX(-50%);
-                bottom: 0;
-                height: 25%;
-                z-index: 1;
-            }
-            .card-text {
-                position: absolute;
-                bottom: 10%;
-                font-family: "Open Sans Bold";
-                margin: 1.2rem;
-                font-size: 1.3rem;
-                line-height: 127.1%;
-                text-align: center;
-                letter-spacing: 0.015em;
-                z-index: 1;
-            }
-            .btn {
-                position: absolute;
-                bottom: 1.5rem;
-                margin-left: 50%;
-                transform: translateX(-50%);
-                background-color: $agro_color-gray-2;
-                border-radius: 1rem;
-                color: $agro_color-white;
-                font-family: "Open Sans";
-                font-weight: 600;
-                font-size: 1.5rem;
-                line-height: .75rem;
-                letter-spacing: 0.015em;
-                width: 13rem;
-                height: 1.75rem;
-                text-transform: lowercase;
-                z-index: 1;
-            }
+    .post {
+        padding-bottom: 5vmax;
+        .post_image {
+            width: 100%;
         }
-    }
-    .btn_more {
+        .post_title {
+            font-family: "Open Sans Bold";
+            font-size: 2.5vmax;
+            font-weight: 700;
+            padding: 2vmax 1vmax 1.5vmax;
+        }
+        .content_preview {
+            font-family: "Open Sans";
+            font-size: 1.25vmax;
+            padding: 0 .5vmax;
+        }
         .btn {
-            margin-top: 5.9rem;
-            margin-bottom: 8.25rem;
+            margin: 2vmax 0;
             background-color: $agro_color-gray-2;
             border-radius: 1rem;
             color: $agro_color-white;
             font-family: "Open Sans";
             font-weight: 600;
-            font-size: 1.5rem;
-            line-height: .75rem;
+            font-size: 1.25vmax;
+            line-height: 0.75rem;
             letter-spacing: 0.015em;
-            width: 13rem;
-            height: 1.75rem;
+            padding: .4vmax 5vmax;
             text-transform: lowercase;
         }
     }
-    @media (max-width: 1200px) {
-        .col_spacing {
-            .card {
-                background: transparent;
-                .card-text {
-                    bottom: 7%;
-                    font-size: 1.3rem;
-                }
+    @media (max-width: 768px) {
+        padding: 0 3vmax;
+        h2 {
+            font-size: 3.1vmax;
+            height: 4.8vmax;
+            text-align: center;
+            width: 19vmax;
+            border-bottom: 0.4vmax solid $agro_color-2;
+            margin-bottom: 4.5vmax;
+        }
+        .post {
+            .post_title {
+                font-size: 2vmax;
+                padding: 2vmax 0 1.5vmax;
             }
-        }
-    }
-    @media (min-width: 992px) {
-        .card_background_image {
-            background: none;
-        }
-    }
-    @media (max-width: 992px) {
-        background: $agro_color-1;
-        padding: 0;
-        max-width: unset;
-        .title {
-            background: $agro_color-white;
-            h2 {
-                height: 7.5vw;
-                width: 10vw;
-                text-align: center;
-                min-width: 9.3rem;
-                border-bottom: .2rem solid $agro_color-2;
-                margin-bottom: 4.5vw;
-                font-size: 5vw;
-            }
-        }
-        .row {
-            padding: 0;
-            .col_spacing {
+            .content_preview {
+                font-size: 1.7vmax;
                 padding: 0;
-                .card_background_image {
-                    height: 100vh!important;
-                    min-height: 20rem;
-                    width: 100%!important;
-                    padding: 10vh 10vw;
-                    background-size: cover!important;
-                    background-position: center!important;
-                    .card {
-                        height: 80vh;
-                        border: .2rem solid $agro_color-white;
-                        .tag {
-                            max-height: 10vh;
-                            min-height: 8vw;
-                            padding: .75rem;
-                            p {
-                                font-size: 5vw;
-                            }
-                        }
-                        .card-body {
-                            background: transparent;
-                        }
-                        .card-text {
-                            color: $agro_color-white;
-                            text-shadow: 1px 1px 1px $agro_color-black;
-                            bottom: 30%;
-                            margin: 0 30% 0 5%;
-                            text-align: start;
-                            letter-spacing: 0.015em;
-                        }
-                        .btn {
-                            bottom: 10%;
-                        }
-                    }
-                }
-            }
-        }
-        .btn_more {
-            background: $agro_color-white;
-            .btn {
-                margin: 3rem;
             }
         }
     }
 }
 
 #technology {
-    background-repeat: no-repeat!important;
-    background-size: 100% auto!important;
-    padding: 2.5rem;
-    .technology_content {
-        background: rgba($agro_color-white, 0.87);
-        width: 50%;
-        padding: 3rem;
-        h2 {
-            height: 7vw;
-            text-align: center;
-            font-size: 5vw;
-            width: 80%;
-            min-width: 9.3rem;
-            border-bottom: .2rem solid $agro_color-2;
-            margin-bottom: 2.5rem;
-        }
-        p {
-            font-family: "Hind Madurai";
-            font-size: 1rem;
-            line-height: 168.6%;
-            text-align: center;
-            letter-spacing: 0.055em;
-        }
-    }
-    @media (max-width: 1200px) {
+    padding: 0 10vmax;
+    .bg {
+        background-repeat: no-repeat !important;
+        background-size: cover;
+        padding: 5vmax 8vmax;
         .technology_content {
-            padding: 2.5rem;
-            width: 67%;
+            background: rgba($agro_color-white, 0.87);
+            padding: 3vmax 5vmax;
             h2 {
-                font-size: 3rem;
-                height: 4.5rem;
-                width: 60%;
-                min-width: 9.3rem;
-                margin-bottom: 1.5rem;
+                height: 6vmax;
+                text-align: center;
+                font-size: 3.5vmax;
+                width: 23vmax;
+                border-bottom: 0.3vmax solid $agro_color-2;
+                margin-bottom: 2.5vmax;
             }
             p {
-                font-size: 1rem;
+                font-family: "Hind Madurai";
+                font-size: 1.6vmax;
                 line-height: 168.6%;
+                text-align: center;
                 letter-spacing: 0.055em;
             }
         }
-    }
-    @media (max-width: 992px) {
-        .technology_content {
-            padding: 2.5rem;
-            width: 80%;
-            h2 {
-                font-size: 2rem;
-                height: 3rem;
-                width: 60%;
-                min-width: 9.3rem;
-                margin-bottom: 1.5rem;
+        @media(max-width: 768px) {
+            height: 80vmax;
+            position: relative;
+            background-position: center bottom!important;
+            padding: 0;
+            .technology_content {
+                position: absolute;
+                top: 0;
+                background: $agro_color-white;
+                width: 100%;
+                overflow: hidden;
+                min-height: 50vh;
+                max-height: 100%;
+                padding: 1rem 2rem;
+                h2 {
+                    height: 2.5rem;
+                    width: 12rem;
+                    margin-bottom: .75rem;
+                    font-size: 1.5rem;
+                    line-height: 127.1%;
+                    letter-spacing: 0.015em;
+                }
+                p {
+                    font-size: 1rem;
+                    font-weight: 300;
+                    line-height: 159.6%;
+                    letter-spacing: 0.025em;
+                }
             }
-            p {
-                font-size: .75rem;
-                line-height: 168.6%;
-                letter-spacing: 0.055em;
+        }
+        @media(max-width: 768px) and (orientation:landscape) {
+            .technology_content {
+                background: rgba($agro_color-white, 0.87)!important;
+            }
+        }
+        @media (max-width: 575px) {
+            background-size: 100% auto;
+            .technology_content {
+                padding: 1vmax 5vmax;
+                p {
+                    text-align: center;
+                    font-size: 0.85rem;
+                }
             }
         }
     }
-    @media(max-width: 768px) {
-        min-height: 45rem;
-        height: 100vh;
-        position: relative;
-        background-position: center bottom!important;
+    @media (max-width: 575px) {
         padding: 0;
-        .technology_content {
-            position: absolute;
-            top: 0;
-            background: $agro_color-white;
-            width: 100%;
-            overflow: hidden;
-            min-height: 50vh;
-            max-height: 100%;
-            padding: 1rem 2rem;
-            h2 {
-                height: 2.5rem;
-                width: 12rem;
-                margin-bottom: .75rem;
-                font-size: 1.5rem;
-                line-height: 127.1%;
-                letter-spacing: 0.015em;
-            }
-            p {
-                font-size: 1rem;
-                font-weight: 300;
-                line-height: 159.6%;
-                letter-spacing: 0.025em;
-            }
-        }
-    }
-    @media(max-width: 768px) and (orientation:landscape) {
-        .technology_content {
-            background: rgba($agro_color-white, 0.87)!important;
-        }
-    }
-    @media(max-width: 575px) {
-        .technology_content {
-            padding: 1rem 1rem;
-            p {
-                text-align: justify;
-                font-size: .85rem;
-            }
-        }
     }
 }
 
@@ -640,7 +487,7 @@ h2 {
         height: 6vw;
         text-align: center;
         width: 20vw;
-        border-bottom: .2vw solid $agro_color-2;
+        border-bottom: 0.2vw solid $agro_color-2;
         margin-bottom: 4.5vw;
         font-size: 4vw;
     }
@@ -654,20 +501,20 @@ h2 {
             font-family: "Open Sans";
             font-weight: 600;
             font-size: 1.5rem;
-            line-height: .75rem;
+            line-height: 0.75rem;
             letter-spacing: 0.015em;
             width: 13rem;
             height: 1.75rem;
             text-transform: lowercase;
         }
     }
-    @media (orientation:portrait) {
+    @media (orientation: portrait) {
         padding-top: 3vh;
         h2 {
             height: 6vh;
             text-align: center;
             width: 20vh;
-            border-bottom: .2vh solid $agro_color-2;
+            border-bottom: 0.2vh solid $agro_color-2;
             margin-bottom: 4.5vh;
             font-size: 4vh;
         }
@@ -675,290 +522,234 @@ h2 {
 }
 
 #contact {
-    padding: 8.7rem 0 13.8rem 0;
-    background-size: cover!important;
-    .left_image {
-        position: relative;
-        margin: 2.5rem 0;
-        img {
-            position: absolute;
-            left: 0;
-            width: 57vw;
-            max-width: 48.25rem;
-        }
-    }
-    .contact_content {
-        h2 {
-            height: 7rem;
-            width: 28rem;
-            margin-bottom: 3rem;
-            border-bottom: .2rem solid $agro_color-2;
-            white-space: nowrap;
-        }
-        .col-1 {
-            padding: 0
-        }
-        .svg-container {
-            display: inline-block;
-            position: relative;
-            width: 100%;
-            padding-bottom: 100%;
-            vertical-align: middle;
-            overflow: hidden;
-            .svg-content {
-                display: inline-block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                @media (min-width: 992px) {
-                    path {
-                        fill: $agro_color-gray-1;
-                    }
-                }
-            }
-        }
-        p {
-            font-family: "Hind Madurai";
-            font-weight: 300;
-            font-size: 2.25rem;
-            line-height: 126.6%;
-            letter-spacing: 0.015em;
-            margin-bottom: 3rem;
-            padding-left: .7rem;
-        }
-        form {
-            width: 28rem;
-            .form-group {
-                label {
-                    font-family: "Open Sans Bold";
-                    font-size: .75rem;
-                    line-height: 127.1%;
-                    letter-spacing: 0.015em;
-                    text-transform: uppercase;
-                    color: $agro_color-gray-1;
-                }
-                .form-control {
-                    margin-bottom: 3rem;
-                    &[name="name"],
-                    &[name="email"] {
-                        border: none;
-                        border-radius: 0;
-                        border-bottom: 1px solid $agro_color-gray-1;
-                    }
-                }
-                textarea {
-                    height: 8rem;
-                    resize: none;
-                    margin-top: 1rem;
-                    border: 1px solid $agro_color-gray-1;
-                    box-sizing: border-box;
-                    border-radius: 12px;
-                }
-            }
-            button {
-                font-family: "Open Sans Bold";
-                color: $agro_color-white;
-                background: $agro_color-gray-2;
-                border-radius: .375rem;
-                width: 50%;
-                height: 2.6rem;
-                font-weight: 100;
-                font-size: 2.25rem;
-                line-height: .75rem;
-                letter-spacing: 0.015em;
-                text-transform: lowercase;
-            }
-        }
-    }
-    .social {
-        padding: 10rem 0 0 7rem;
-        a {
-            margin-bottom: 6rem;
-            img {
-                height: 2rem;
-            }
-        }
-    }
-    @media (max-width:1200px) {
+    padding: 0 10vmax 3vmax;
+    .bg {
+        padding: 7vmax 11vmax;
+        background-size: cover !important;
         .contact_content {
-            h2 {
-                height: 5rem;
-                font-size: 3.5rem;
-                width: 22rem;
-                margin-bottom: 1.5rem;
-            }
-            p {
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-            }
-            form {
-                width: 22rem;
-                .form-group {
-                    .form-control {
-                        margin-bottom: 1.5rem;
-                    }
-                    textarea {
-                        margin-top: .5rem;
-                    }
-                }
-                button {
-                    height: 2rem;
-                    font-size: 1.5rem;
-                }
-            }
-        }
-    }
-    @media (min-width:992.1px) {
-        .contact_content {
-            margin: 4.5rem;
-            padding: 4.5rem;
             background: rgba($agro_color-white, 0.79);
-        }
-    }
-    @media (max-width:992px) {
-        margin-top: 2.8rem;
-        padding: 3rem;
-        background: $agro_color-1!important;
-        color: $agro_color-white;
-        .contact_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             h2 {
-                color: $agro_color-3;
-                height: 7rem;
-                margin-bottom: 0;
-                border-bottom: none;
+                margin: 3.5vmax 0 2vmax;
+                width: 100%;
+                text-align: center;
+                white-space: nowrap;
+                font-size: 4vmax;
+                font-weight: 900;
             }
-            .col-1 {
-                padding-left: 1rem;
-            }
-            p {
-                font-size: 1.75rem;
-                line-height: 126.6%;
-                margin-bottom: 3rem;
+            .contact_outer {
+                width: 90%;
+                border-bottom: solid $agro_color-black .2vmax;
+                display: flex;
+                justify-content: center;
+                .contact_inner {
+                    width: 25vmax;
+                    .svg-container {
+                        width: 2rem;
+                        display: flex;
+                        align-items: center;
+                        .svg-content {
+                            @media (min-width: 992px) {
+                                path {
+                                    fill: $agro_color-gray-1;
+                                }
+                            }
+                        }
+                    }
+                    p {
+                        font-family: "Hind Madurai";
+                        font-weight: 300;
+                        font-size: 1.6vmax;
+                        line-height: 126.6%;
+                        letter-spacing: 0.015em;
+                        margin: 1.5vmax 0;
+                        padding-left: 0.7rem;
+                        font-weight: 900;
+                    }
+                }
             }
             form {
-                width: 70%;
+                width: 85%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .form_padding {
+                    width: 60%;
+                }
                 .form-group {
+                    width: 100%;
+                    margin: 1.5vmax 0;
                     label {
-                        font-size: 1rem;
-                        color: $agro_color-white;
+                        font-family: "Open Sans Bold";
+                        font-size: 1.25vmax;
+                        font-weight: 900;
+                        line-height: 127.1%;
+                        letter-spacing: 0.015em;
+                        text-transform: uppercase;
+                        color: $agro_color-gray-1;
+                        &[for="question"] {
+                            width: 100%;
+                            text-align: center;
+                        }
                     }
                     .form-control {
-                        background: transparent;
-                        color: $agro_color-white;
+                        background-color: transparent;
                         &[name="name"],
                         &[name="email"] {
-                            border-bottom: .2rem solid $agro_color-white;
+                            border: none;
+                            border-radius: 0;
+                            border-bottom: 1px solid $agro_color-gray-1;
                         }
                     }
                     textarea {
-                        border: .2rem solid $agro_color-white;
+                        height: 8rem;
+                        resize: none;
+                        border: 1px solid $agro_color-gray-1;
+                        box-sizing: border-box;
+                        border-radius: 12px;
                     }
                 }
                 button {
-                    height: 2.6rem;
-                    font-size: 2.25rem;
-                }
-            }
-        }
-    }
-    @media (max-width:992px) and (orientation:portrait) {
-        min-height: 100vh;
-        padding: 2vh;
-        .contact_content {
-            h2 {
-                height: 8vh;
-                font-size: 5vh;
-            }
-            .col-1 {
-                padding-left: 2.5vh;
-            }
-            p {
-                margin-bottom: 4vh;
-                font-size: 2.5vh;
-            }
-            form {
-                width: 70%;
-                .form-group {
-                    label {
-                        font-size: 2vh;
-                        color: $agro_color-white;
-                    }
-                    .form-control {
-                        margin-bottom: 0;
-                    }
-                    textarea {
-                        height: 15vh;
-                        border: .2rem solid $agro_color-white;
-                    }
-                }
-                button {
-                    height: 3.5vh;
-                    font-size: 2.5vh;
+                    font-family: "Open Sans Bold";
+                    color: $agro_color-white;
+                    background: $agro_color-gray-2;
+                    border-radius: 0.375rem;
+                    padding: .75vmax 5vmax;
+                    margin: 0 3.5vmax 2vmax;
+                    font-weight: 700;
+                    font-size: 1.25vmax;
+                    line-height: 0.75rem;
+                    letter-spacing: 0.015em;
+                    text-transform: lowercase;
                 }
             }
         }
         .social {
-            padding: 3.5rem 0 0 3rem;
+            padding: 10rem 0 0 7rem;
             a {
-                margin-bottom: 3rem;
+                margin-bottom: 6rem;
                 img {
                     height: 2rem;
                 }
             }
         }
+        @media (max-width: 991.98px) {
+            margin-top: 2.8rem;
+            padding: 3rem;
+            background: $agro_color-1 !important;
+            color: $agro_color-white;
+            .contact_content {
+                h2 {
+                    color: $agro_color-3;
+                    height: 7rem;
+                    margin-bottom: 0;
+                    border-bottom: none;
+                }
+                .col-1 {
+                    padding-left: 1rem;
+                }
+                p {
+                    font-size: 1.75rem;
+                    line-height: 126.6%;
+                    margin-bottom: 3rem;
+                }
+                form {
+                    width: 70%;
+                    .form-group {
+                        label {
+                            font-size: 1rem;
+                            color: $agro_color-white;
+                        }
+                        .form-control {
+                            background: transparent;
+                            color: $agro_color-white;
+                            &[name="name"],
+                            &[name="email"] {
+                                border-bottom: 0.2vmax solid $agro_color-white;
+                            }
+                        }
+                        textarea {
+                            border: 0.2rem solid $agro_color-white;
+                        }
+                    }
+                    button {
+                        height: 2.6rem;
+                        font-size: 2.25rem;
+                    }
+                }
+            }
+        }
+        @media (max-width: 576px) {
+            padding: 2vmax;
+            .contact_content {
+                background: transparent;
+                align-items: flex-start;
+                h2 {
+                    text-align: start;
+                    font-size: 2.25vmax;
+                    height: 100%;
+                    margin-bottom: .5vmax;
+                }
+                .contact_outer {
+                    border: none;
+                    .contact_inner {
+                        width: 100%!important;
+                        .svg-container {
+                            width: 1rem;
+                            margin-right: 1vmax;
+                        }
+                        p {
+                            padding-left: 0;
+                            font-size: 1.5vmax;
+                        }
+                    }
+                }
+                form {
+                    width: 60%;
+                    .form_padding {
+                        width: 100%;
+                    }
+                    .form-group {
+                        label {
+                            font-size: 1.5vmax;
+                            color: $agro_color-white;
+                            margin: 0;
+                            &[for="question"] {
+                                text-align: start;
+                                margin-bottom: 1vmax;
+                            }
+                        }
+                        .form-control {
+                            margin-bottom: 0;
+                            font-size: 1.5vmax;
+                        }
+                        textarea {
+                            height: 8vmax;
+                            border: 0.2vmax solid $agro_color-white;
+                        }
+                    }
+                    button {
+                        border-radius: 1rem;
+                        padding: .5vmax 3.5vmax;
+                        margin: 0;
+                        height: 100%;
+                        font-weight: 700;
+                        line-height: 100%;
+                        font-size: 1.25vmax;
+                    }
+                }
+            }
+        }
     }
-    @media (max-width:576px) {
-        min-height: 100vh;
-        padding: 2vh;
-        .contact_content {
-            h2 {
-                height: 8vh;
-                font-size: 5vh;
-            }
-            .col-1 {
-                padding-left: 1.5vh;
-            }
-            p {
-                margin-bottom: 4vh;
-                padding-left: 0;
-                font-size: 2.5vh;
-            }
-            form {
-                width: 80%;
-                .form-group {
-                    label {
-                        font-size: 2vh;
-                        color: $agro_color-white;
-                    }
-                    .form-control {
-                        margin-bottom: 0;
-                    }
-                    textarea {
-                        height: 15vh;
-                        border: .2rem solid $agro_color-white;
-                    }
-                }
-                button {
-                    height: 3.5vh;
-                    min-height: 1.5rem;
-                    font-size: 2.5vh;
-                }
-            }
-        }
-        .social {
-            padding: 3.5rem 0 0 1rem;
-            a {
-                margin-bottom: 3rem;
-                img {
-                    height: 2rem;
-                }
-            }
-        }
+    @media(max-width:576px) {
+        padding: 0;
     }
 }
 
 footer {
-    @media(max-width: 992px) {
+    @media (max-width: 992px) {
         background-color: $agro_color-white;
         .navbar-nav {
             .nav-item {
@@ -973,7 +764,7 @@ footer {
             }
         }
         path {
-            fill: $agro_color-1!important;
+            fill: $agro_color-1 !important;
         }
     }
 }

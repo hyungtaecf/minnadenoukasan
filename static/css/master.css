@@ -89,6 +89,9 @@ footer .svg-container .svg-content path {
 }
 
 @media (max-width: 992px) {
+  footer {
+    height: 100%;
+  }
   footer .navbar-nav {
     width: 100% !important;
   }
@@ -98,7 +101,7 @@ footer .svg-container .svg-content path {
     letter-spacing: 0.015em;
   }
   footer .navbar-nav .nav-item .nav-link {
-    font-size: 3vw;
+    font-size: 1.2vmax;
     white-space: nowrap;
   }
   footer .navbar-nav .nav-item .nav-link:hover, footer .navbar-nav .nav-item .nav-link:active, footer .navbar-nav .nav-item .nav-link:focus {
@@ -129,7 +132,11 @@ header {
 }
 
 header .navbar {
-  min-height: 13.7rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 3vmax;
+  min-height: 20vmin;
   color: #000;
 }
 
@@ -138,11 +145,11 @@ header .navbar.bg_agro-light {
 }
 
 header .navbar .navbar-brand {
-  margin: 0 2.75rem;
+  margin: 0 2.75vw;
 }
 
 header .navbar .navbar-brand img {
-  max-width: 6.1rem;
+  max-width: 6.1vmax;
 }
 
 header .navbar .nav-item {
@@ -155,7 +162,7 @@ header .navbar .nav-item {
 
 header .navbar .nav-item .nav-link {
   font-family: "Alegreya Sans SC";
-  font-size: 1.5rem;
+  font-size: 1.5vmax;
   color: #000;
 }
 
@@ -171,22 +178,24 @@ header .navbar .nav-item .nav-link:hover, header .navbar .nav-item .nav-link:act
 
 @media (max-width: 1200px) {
   header .navbar .nav-item {
-    margin: 0 2rem;
+    margin: 0 2vw;
   }
   header .navbar .nav-item:last-child {
-    margin-right: 5rem;
+    margin-right: 5vw;
   }
 }
 
 header .navbar .form-inline {
-  width: 13rem;
+  width: 13vmax;
+  min-width: 10rem;
 }
 
 header .navbar .form-inline input {
   border: 1px solid #000;
   border-radius: 1.87rem;
-  padding: 0 2.5rem 0 .8rem;
+  padding: 1.25vmax 2.5vmax 1.25vmax .8vmax;
   height: 1.75rem;
+  width: 100%;
   max-width: 12rem;
 }
 
@@ -194,15 +203,23 @@ header .navbar .form-inline button {
   right: .73rem;
 }
 
+header .navbar .navbar-toggler {
+  border: none;
+}
+
+header .navbar .navbar-toggler:focus {
+  outline: none;
+}
+
 @media (max-width: 992px) {
   header .navbar {
-    min-height: 4rem;
+    min-height: 12.5vmax;
   }
   header .navbar .navbar-brand {
     margin: 0;
   }
   header .navbar .navbar-brand img {
-    max-width: 3rem;
+    max-width: 4vmax;
   }
   header .navbar .nav-item {
     margin: 0;

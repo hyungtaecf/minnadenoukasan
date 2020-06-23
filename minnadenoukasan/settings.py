@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7mu4dv2ea$fiz69=-be0g=1r!&t(5vuoq7f69#1m8b_jy%^51_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['kgen.pythonanywhere.com','www.minnadenoukasan.life','127.0.0.1','localhost','minnadenoukasan.life']
 

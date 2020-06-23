@@ -89,6 +89,9 @@ footer .svg-container .svg-content path {
 }
 
 @media (max-width: 992px) {
+  footer {
+    height: 100%;
+  }
   footer .navbar-nav {
     width: 100% !important;
   }
@@ -98,7 +101,7 @@ footer .svg-container .svg-content path {
     letter-spacing: 0.015em;
   }
   footer .navbar-nav .nav-item .nav-link {
-    font-size: 3vw;
+    font-size: 1.2vmax;
     white-space: nowrap;
   }
   footer .navbar-nav .nav-item .nav-link:hover, footer .navbar-nav .nav-item .nav-link:active, footer .navbar-nav .nav-item .nav-link:focus {

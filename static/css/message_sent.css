@@ -59,11 +59,11 @@ body {
 
 .message_sent h2 {
   font-family: "Abhaya Libre";
-  font-size: 4vw;
+  font-size: 3.5vw;
   line-height: 127.1%;
   text-align: center;
   letter-spacing: 0.015em;
-  margin: 5vw 0;
+  margin: 5vw 0 0;
 }
 
 .message_sent h1 {

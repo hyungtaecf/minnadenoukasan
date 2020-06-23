@@ -22,15 +22,17 @@ body {
 header {
     overflow: visible;
     .navbar {
-        min-height: 13.7rem;
+        align-items: flex-end;
+        padding-bottom: 3vmax;
+        min-height: 20vmin;
         color: $agro_color-black;
         &.bg_agro-light {
             background: $agro_color-white;
         }
         .navbar-brand {
-            margin: 0 2.75rem;
+            margin: 0 2.75vw;
             img {
-                max-width: 6.1rem;
+                max-width: 6.1vmax;
             }
         }
         .nav-item {
@@ -41,7 +43,7 @@ header {
             white-space: nowrap;
             .nav-link {
                 font-family: "Alegreya Sans SC";
-                font-size: 1.5rem;
+                font-size: 1.5vmax;
                 color: $agro_color-black;
                 &:hover,
                 &:active,
@@ -53,31 +55,39 @@ header {
                 margin: 0 1vw;
             }
             @media (max-width: 1200px) {
-                margin: 0 2rem;
+                margin: 0 2vw;
                 &:last-child {
-                    margin-right: 5rem;
+                    margin-right: 5vw;
                 }
             }
         }
         .form-inline {
-            width: 13rem;
+            width: 13vmax;
+            min-width: 10rem;
             input {
                 border: 1px solid $agro_color-black;
                 border-radius: 1.87rem;
-                padding: 0 2.5rem 0 .8rem;
+                padding: 1.25vmax 2.5vmax 1.25vmax .8vmax;
                 height: 1.75rem;
+                width: 100%;
                 max-width: 12rem;
             }
             button {
                 right: .73rem;
             }
         }
+        .navbar-toggler {
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
         @media (max-width: 992px) {
-            min-height: 4rem;
+            min-height: 12.5vmax;
             .navbar-brand {
                 margin: 0;
                 img {
-                    max-width: 3rem;
+                    max-width: 4vmax;
                 }
             }
             .nav-item {
