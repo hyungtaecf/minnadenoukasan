@@ -54,10 +54,7 @@ def home(request):
 
     context = {
         'qAndA_form':qAndA_form,
-        # 'most_recent':Post.objects.order_by('-publish_date'),
         'gallery':GalleryImage.objects.all()[:displayingItemsNumber],
-        'article_1':get_object_or_404(Post, slug='recruitment-of-fields-for-freeze-thaw-awakening-technology'),
-        'article_2':get_object_or_404(Post, slug='japan-s-technology-to-avoid-a-worldwide-food-crisis'),
     }
     return render(request, 'index.html', context)
 
